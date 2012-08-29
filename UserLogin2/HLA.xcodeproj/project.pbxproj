@@ -26,6 +26,9 @@
 		C4BD872315B51BEC00DFFB95 /* Policy Details.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BD871A15B51BEC00DFFB95 /* Policy Details.png */; };
 		C4BD872415B51BEC00DFFB95 /* Security Question.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BD871B15B51BEC00DFFB95 /* Security Question.png */; };
 		C4BD872515B51BEC00DFFB95 /* Untitled.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BD871C15B51BEC00DFFB95 /* Untitled.png */; };
+		EF17D1BD15EDAF2900A7C0BC /* RiderPTypeTbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF17D1BC15EDAF2900A7C0BC /* RiderPTypeTbViewController.m */; };
+		EF17D1C215EDB99300A7C0BC /* RiderListTbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF17D1C115EDB99300A7C0BC /* RiderListTbViewController.m */; };
+		EF17D1C415EDD50800A7C0BC /* hladb.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = EF17D1C315EDD50800A7C0BC /* hladb.sqlite */; };
 		EF1B6C4F15C8DE2000E4E9B3 /* BasicPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1B6C4E15C8DE2000E4E9B3 /* BasicPlanViewController.m */; };
 		EF35FF9B15C8FB290004E66A /* RiderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF35FF9A15C8FB290004E66A /* RiderViewController.m */; };
 		EF65D49115C62C3400F0815C /* NewLAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF65D49015C62C3400F0815C /* NewLAViewController.m */; };
@@ -48,7 +51,6 @@
 		EFDA469615B55FF7002F712A /* ForgotPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDA469515B55FF7002F712A /* ForgotPwdViewController.m */; };
 		EFDA469E15B64D9E002F712A /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDA469D15B64D9E002F712A /* UserProfileViewController.m */; };
 		EFF05E7B15D1041000D7F3D0 /* ListingTbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF05E7A15D1041000D7F3D0 /* ListingTbViewController.m */; };
-		EFF8C90F15D3A44600C96160 /* hladb.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = EFF8C90E15D3A44600C96160 /* hladb.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,11 @@
 		C4BD871A15B51BEC00DFFB95 /* Policy Details.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Policy Details.png"; sourceTree = "<group>"; };
 		C4BD871B15B51BEC00DFFB95 /* Security Question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Security Question.png"; sourceTree = "<group>"; };
 		C4BD871C15B51BEC00DFFB95 /* Untitled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled.png; sourceTree = "<group>"; };
+		EF17D1BB15EDAF2900A7C0BC /* RiderPTypeTbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RiderPTypeTbViewController.h; path = ../RiderPTypeTbViewController.h; sourceTree = "<group>"; };
+		EF17D1BC15EDAF2900A7C0BC /* RiderPTypeTbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RiderPTypeTbViewController.m; path = ../RiderPTypeTbViewController.m; sourceTree = "<group>"; };
+		EF17D1C015EDB99300A7C0BC /* RiderListTbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RiderListTbViewController.h; path = ../RiderListTbViewController.h; sourceTree = "<group>"; };
+		EF17D1C115EDB99300A7C0BC /* RiderListTbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RiderListTbViewController.m; path = ../RiderListTbViewController.m; sourceTree = "<group>"; };
+		EF17D1C315EDD50800A7C0BC /* hladb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = hladb.sqlite; sourceTree = "<group>"; };
 		EF1B6C4D15C8DE2000E4E9B3 /* BasicPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicPlanViewController.h; path = ../BasicPlanViewController.h; sourceTree = "<group>"; };
 		EF1B6C4E15C8DE2000E4E9B3 /* BasicPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicPlanViewController.m; path = ../BasicPlanViewController.m; sourceTree = "<group>"; };
 		EF35FF9915C8FB290004E66A /* RiderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RiderViewController.h; path = ../RiderViewController.h; sourceTree = "<group>"; };
@@ -109,7 +116,6 @@
 		EFDA469D15B64D9E002F712A /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserProfileViewController.m; path = ../UserProfileViewController.m; sourceTree = "<group>"; };
 		EFF05E7915D1041000D7F3D0 /* ListingTbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListingTbViewController.h; path = ../ListingTbViewController.h; sourceTree = "<group>"; };
 		EFF05E7A15D1041000D7F3D0 /* ListingTbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingTbViewController.m; path = ../ListingTbViewController.m; sourceTree = "<group>"; };
-		EFF8C90E15D3A44600C96160 /* hladb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = hladb.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,7 @@
 				EFDA467E15B52CCA002F712A /* MainMenuViewController.m */,
 				EFDA469715B5600B002F712A /* AgentProfile */,
 				EF03045C15BBDCF200CF71D0 /* SI */,
+				EF17D1BF15EDAF4900A7C0BC /* Dropdown */,
 				C4003CB015AF8E9F00253927 /* Supporting Files */,
 			);
 			name = Navigation;
@@ -199,7 +206,7 @@
 		C44332B215B3FA1F005E185B /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				EFF8C90E15D3A44600C96160 /* hladb.sqlite */,
+				EF17D1C315EDD50800A7C0BC /* hladb.sqlite */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -237,6 +244,17 @@
 				EFF05E7A15D1041000D7F3D0 /* ListingTbViewController.m */,
 			);
 			name = SI;
+			sourceTree = "<group>";
+		};
+		EF17D1BF15EDAF4900A7C0BC /* Dropdown */ = {
+			isa = PBXGroup;
+			children = (
+				EF17D1BB15EDAF2900A7C0BC /* RiderPTypeTbViewController.h */,
+				EF17D1BC15EDAF2900A7C0BC /* RiderPTypeTbViewController.m */,
+				EF17D1C015EDB99300A7C0BC /* RiderListTbViewController.h */,
+				EF17D1C115EDB99300A7C0BC /* RiderListTbViewController.m */,
+			);
+			name = Dropdown;
 			sourceTree = "<group>";
 		};
 		EF6D515B15D9F93200204CAD /* Button */ = {
@@ -347,7 +365,7 @@
 				EFD24D0D15BE94E60028CDC9 /* iconHLwithbackground.png in Resources */,
 				EF65D4A715C6544600F0815C /* house.png in Resources */,
 				EF65D4B515C6767C00F0815C /* header-repeted.png in Resources */,
-				EFF8C90F15D3A44600C96160 /* hladb.sqlite in Resources */,
+				EF17D1C415EDD50800A7C0BC /* hladb.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +390,8 @@
 				EF1B6C4F15C8DE2000E4E9B3 /* BasicPlanViewController.m in Sources */,
 				EF35FF9B15C8FB290004E66A /* RiderViewController.m in Sources */,
 				EFF05E7B15D1041000D7F3D0 /* ListingTbViewController.m in Sources */,
+				EF17D1BD15EDAF2900A7C0BC /* RiderPTypeTbViewController.m in Sources */,
+				EF17D1C215EDB99300A7C0BC /* RiderListTbViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
