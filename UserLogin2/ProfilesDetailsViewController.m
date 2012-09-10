@@ -22,23 +22,20 @@
 @synthesize retypePwdField;
 @synthesize agentCodeField;
 @synthesize agentNameField;
-@synthesize agentTypeField;
 @synthesize cntcNoField;
 @synthesize leaderCodeField;
 @synthesize leaderNameField;
 @synthesize registrationNoField;
 @synthesize emailField;
 @synthesize statusLabel;
+@synthesize QOneLabel;
+@synthesize QTwoLabel;
+@synthesize QThreeLabel;
+@synthesize ansOneField;
+@synthesize ansTwoField;
+@synthesize ansThreeField;
 @synthesize userID;
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize popOverConroller,questOneCode,questTwoCode,questThreeCode;
 
 - (void)viewDidLoad
 {
@@ -48,24 +45,21 @@
     NSArray *dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *docsDir = [dirPaths objectAtIndex:0];
     databasePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent: @"hladb.sqlite"]];
-}
-
-- (void)viewDidUnload
-{
-    [self setAgentNameField:nil];
-    [self setAgentCodeField:nil];
-    [self setAgentTypeField:nil];
-    [self setCntcNoField:nil];
-    [self setLeaderCodeField:nil];
-    [self setLeaderNameField:nil];
-    [self setEmailField:nil];
-    [self setMyScrollView:nil];
-    [self setRegistrationNoField:nil];
-    [self setOldPwdField:nil];
-    [self setRetypePwdField:nil];
-    [self setStatusLabel:nil];
-    [self setChangePwdField:nil];
-    [super viewDidUnload];
+    
+    UITapGestureRecognizer *gestureQOne = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectQuestOne:)];
+    gestureQOne.numberOfTapsRequired = 1;
+    [QOneLabel addGestureRecognizer:gestureQOne];
+    [gestureQOne release];
+    
+    UITapGestureRecognizer *gestureQTwo = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectQuestTwo:)];
+    gestureQTwo.numberOfTapsRequired = 1;
+    [QTwoLabel addGestureRecognizer:gestureQTwo];
+    [gestureQTwo release];
+    
+    UITapGestureRecognizer *gestureQThree = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectQuestThree:)];
+    gestureQThree.numberOfTapsRequired = 1;
+    [QThreeLabel addGestureRecognizer:gestureQThree];
+    [gestureQThree release];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -98,6 +92,8 @@
 	[super viewDidDisappear:animated];
 }
 
+#pragma mark - action
+
 - (IBAction)cancelBtnPressed:(id)sender 
 {
     [self dismissModalViewControllerAnimated:YES];
@@ -105,7 +101,7 @@
 
 - (IBAction)doSave:(id)sender 
 {
-    if (oldPwdField.text.length <= 0 || changePwdField.text.length <= 0 || retypePwdField.text.length <= 0) {
+    if (oldPwdField.text.length <= 0 || changePwdField.text.length <= 0 || retypePwdField.text.length <= 0 || ansOneField.text.length <= 0 || ansTwoField.text.length <= 0 || ansThreeField.text.length <= 0) {
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please fill password field!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
@@ -124,22 +120,64 @@
     }
 }
 
-- (void)dealloc {
-    [agentNameField release];
-    [agentCodeField release];
-    [agentTypeField release];
-    [cntcNoField release];
-    [leaderCodeField release];
-    [leaderNameField release];
-    [myScrollView release];
-    [registrationNoField release];
-    [oldPwdField release];
-    [retypePwdField release];
-    [emailField release];
-    [statusLabel release];
-    [changePwdField release];
-    [super dealloc];
+- (void)selectQuestOne:(id)sender
+{
+    if(![popOverConroller isPopoverVisible]){
+        
+        selectOne = YES;
+		SecurityQuesTbViewController *popView = [[SecurityQuesTbViewController alloc] init];
+		popOverConroller = [[[UIPopoverController alloc] initWithContentViewController:popView] retain];
+        popView.delegate = self;
+        [popView release];
+		
+		[popOverConroller setPopoverContentSize:CGSizeMake(530.0f, 400.0f)];
+        [popOverConroller presentPopoverFromRect:CGRectMake(0, 0, 550, 600) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+	}
+    else{
+		[popOverConroller dismissPopoverAnimated:YES];
+        selectOne = NO;
+	}
 }
+
+- (void)selectQuestTwo:(id)sender
+{
+    if(![popOverConroller isPopoverVisible]){
+        
+        selectTwo = YES;
+		SecurityQuesTbViewController *popView = [[SecurityQuesTbViewController alloc] init];
+		popOverConroller = [[[UIPopoverController alloc] initWithContentViewController:popView] retain];
+        popView.delegate = self;
+        [popView release];
+		
+		[popOverConroller setPopoverContentSize:CGSizeMake(530.0f, 400.0f)];
+        [popOverConroller presentPopoverFromRect:CGRectMake(0, 0, 550, 600) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+	}
+    else{
+		[popOverConroller dismissPopoverAnimated:YES];
+        selectTwo = NO;
+	}
+}
+
+- (void)selectQuestThree:(id)sender
+{
+    if(![popOverConroller isPopoverVisible]){
+        
+        selectThree = YES;
+		SecurityQuesTbViewController *popView = [[SecurityQuesTbViewController alloc] init];
+		popOverConroller = [[[UIPopoverController alloc] initWithContentViewController:popView] retain];
+        popView.delegate = self;
+        [popView release];
+		
+		[popOverConroller setPopoverContentSize:CGSizeMake(530.0f, 400.0f)];
+        [popOverConroller presentPopoverFromRect:CGRectMake(0, 0, 550, 600) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+	}
+    else{
+		[popOverConroller dismissPopoverAnimated:YES];
+        selectThree = NO;
+	}
+}
+
+#pragma mark - handling DB
 
 - (void) saveData
 {
@@ -163,7 +201,8 @@
             sqlite3_finalize(statement);
         }
         
-        NSString *query2 = [NSString stringWithFormat:@"UPDATE tbl_Agent_Profile SET AgentCode= \"%@\", AgentName= \"%@\" ,AgentType= \"%@\",AgentContactNo= \"%@\",ImmediateLeaderCode= \"%@\",ImmediateLeaderName= \"%@\",BusinessRegNumber= \"%@\",AgentEmail= \"%@\" WHERE IndexNo = \"%d\"",agentCodeField.text,agentNameField.text,agentTypeField.text,cntcNoField.text,leaderCodeField.text,leaderNameField.text,registrationNoField.text,emailField.text,self.userID];
+        NSString *query2 = [NSString stringWithFormat:
+        @"UPDATE tbl_Agent_Profile SET AgentCode= \"%@\", AgentName= \"%@\" ,AgentContactNo= \"%@\",ImmediateLeaderCode= \"%@\",ImmediateLeaderName= \"%@\",BusinessRegNumber= \"%@\",AgentEmail= \"%@\" WHERE IndexNo = \"%d\"",agentCodeField.text,agentNameField.text,cntcNoField.text,leaderCodeField.text,leaderNameField.text,registrationNoField.text,emailField.text,self.userID];
         
         const char *result = [query2 UTF8String];
         if (sqlite3_prepare_v2(contactDB, result, -1, &statement, NULL) == SQLITE_OK)
@@ -180,9 +219,25 @@
             sqlite3_finalize(statement);
         }
         
+        NSString *insertSQL = [NSString stringWithFormat:
+        @"INSERT INTO tbl_SecurityQuestion_Input (SecurityQuestionCode, SecurityQuestionAns) SELECT \"%@\", \"%@\" UNION ALL SELECT \"%@\", \"%@\" UNION ALL SELECT \"%@\", \"%@\"",questOneCode,ansOneField.text,questTwoCode,ansTwoField.text,questThreeCode,ansThreeField.text];
+        
+        const char *insert_stmt = [insertSQL UTF8String];
+        if(sqlite3_prepare_v2(contactDB, insert_stmt, -1, &statement, NULL) == SQLITE_OK) {
+            if (sqlite3_step(statement) == SQLITE_DONE)
+            {
+                NSLog(@"save question success!");
+            } else {
+                NSLog(@"Failed save question");
+            }
+            sqlite3_finalize(statement);
+        }
+        
         sqlite3_close(contactDB);
     }
 }
+
+#pragma mark - keyboard
 
 -(void)keyboardDidShow:(NSNotificationCenter *)notification
 {
@@ -203,6 +258,81 @@
 {
     activeField = textField;
     return YES;
+}
+
+#pragma mark - delegate
+
+-(void)securityQuest:(SecurityQuesTbViewController *)inController didSelectQuest:(NSString *)code desc:(NSString *)desc
+{
+    if (selectOne) {
+        questOneCode = [[NSString alloc] initWithFormat:@"%@",code];
+        QOneLabel.text = [[NSString alloc] initWithFormat:@"%@",desc];
+    }
+    else if (selectTwo) {
+        questTwoCode = [[NSString alloc] initWithFormat:@"%@",code];
+        QTwoLabel.text = [[NSString alloc] initWithFormat:@"%@",desc];
+    }
+    else if (selectThree) {
+        questThreeCode = [[NSString alloc] initWithFormat:@"%@",code];
+        QThreeLabel.text = [[NSString alloc] initWithFormat:@"%@",desc];
+    }
+    [popOverConroller dismissPopoverAnimated:YES];
+    selectOne = NO;
+    selectTwo = NO;
+    selectThree = NO;
+}
+
+#pragma mark - Memory Management
+
+- (void)viewDidUnload
+{
+    [self setAgentNameField:nil];
+    [self setAgentCodeField:nil];
+    [self setCntcNoField:nil];
+    [self setLeaderCodeField:nil];
+    [self setLeaderNameField:nil];
+    [self setEmailField:nil];
+    [self setMyScrollView:nil];
+    [self setRegistrationNoField:nil];
+    [self setOldPwdField:nil];
+    [self setRetypePwdField:nil];
+    [self setStatusLabel:nil];
+    [self setChangePwdField:nil];
+    [self setQOneLabel:nil];
+    [self setQTwoLabel:nil];
+    [self setQThreeLabel:nil];
+    [self setAnsOneField:nil];
+    [self setAnsTwoField:nil];
+    [self setAnsThreeField:nil];
+    [self setQuestOneCode:nil];
+    [self setQuestTwoCode:nil];
+    [self setQuestThreeCode:nil];
+    [super viewDidUnload];
+}
+
+- (void)dealloc {
+    [agentNameField release];
+    [agentCodeField release];
+    [cntcNoField release];
+    [leaderCodeField release];
+    [leaderNameField release];
+    [myScrollView release];
+    [registrationNoField release];
+    [oldPwdField release];
+    [retypePwdField release];
+    [emailField release];
+    [statusLabel release];
+    [changePwdField release];
+    [QOneLabel release];
+    [QTwoLabel release];
+    [QThreeLabel release];
+    [ansOneField release];
+    [ansTwoField release];
+    [ansThreeField release];
+    [questOneCode release];
+    [questTwoCode release];
+    [questThreeCode release];
+    [super dealloc];
 }
 
 @end

@@ -126,54 +126,41 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Agent Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="drF-MS-IaX">
-                                        <rect key="frame" x="58" y="447" width="201" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Agent Type" minimumFontSize="17" id="729-Yd-9yQ">
-                                        <rect key="frame" x="267" y="447" width="196" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Agent Contact No." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="L8x-Yw-A4H">
-                                        <rect key="frame" x="58" y="486" width="171" height="31"/>
+                                        <rect key="frame" x="58" y="448" width="171" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contact Number" minimumFontSize="17" id="3gc-Vc-beN">
-                                        <rect key="frame" x="267" y="486" width="196" height="31"/>
+                                        <rect key="frame" x="267" y="448" width="196" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Immediate Leaders Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="FLm-hT-tCd">
-                                        <rect key="frame" x="59" y="523" width="192" height="31"/>
+                                        <rect key="frame" x="59" y="485" width="192" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Leader Code" minimumFontSize="17" id="WMJ-sY-qh9">
-                                        <rect key="frame" x="267" y="523" width="196" height="31"/>
+                                        <rect key="frame" x="267" y="485" width="196" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Immediate Leaders Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="PIU-hQ-cXt">
-                                        <rect key="frame" x="59" y="559" width="207" height="31"/>
+                                        <rect key="frame" x="59" y="521" width="207" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Leader's Name" minimumFontSize="17" id="rf2-ut-3ec">
-                                        <rect key="frame" x="267" y="561" width="196" height="31"/>
+                                        <rect key="frame" x="267" y="523" width="196" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -198,41 +185,41 @@
                                         <color key="textColor" red="1" green="0.023529414089999999" blue="0.2470588386" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Select" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="hCn-84-LwG">
-                                        <rect key="frame" x="439" y="93" width="307" height="43"/>
+                                    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Select question one" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="hCn-84-LwG">
+                                        <rect key="frame" x="439" y="93" width="307" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Select" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="1oX-wL-J8e">
-                                        <rect key="frame" x="439" y="135" width="307" height="43"/>
+                                    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Select question two" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="1oX-wL-J8e">
+                                        <rect key="frame" x="439" y="147" width="307" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Select" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Lvn-ga-gzy">
-                                        <rect key="frame" x="439" y="177" width="307" height="56"/>
+                                    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Select question three" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Lvn-ga-gzy">
+                                        <rect key="frame" x="439" y="201" width="307" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Rk0-sN-0n0">
-                                        <rect key="frame" x="747" y="100" width="235" height="31"/>
+                                        <rect key="frame" x="747" y="105" width="235" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="B0z-Wx-hrX">
-                                        <rect key="frame" x="747" y="147" width="235" height="31"/>
+                                        <rect key="frame" x="747" y="159" width="235" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="bHZ-xw-Ecc">
-                                        <rect key="frame" x="747" y="201" width="235" height="31"/>
+                                        <rect key="frame" x="747" y="212" width="235" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -291,21 +278,21 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="7sf-Yb-LoJ">
-                                        <rect key="frame" x="412" y="93" width="28" height="43"/>
+                                        <rect key="frame" x="412" y="93" width="28" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="aeF-Qk-xtK">
-                                        <rect key="frame" x="412" y="135" width="28" height="43"/>
+                                        <rect key="frame" x="412" y="147" width="28" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Lhk-2n-FHb">
-                                        <rect key="frame" x="412" y="178" width="28" height="54"/>
+                                        <rect key="frame" x="412" y="201" width="28" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -354,9 +341,14 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="QOneLabel" destination="hCn-84-LwG" id="oSD-b8-GWy"/>
+                        <outlet property="QThreeLabel" destination="Lvn-ga-gzy" id="hRZ-Vu-ACC"/>
+                        <outlet property="QTwoLabel" destination="1oX-wL-J8e" id="Tzu-bS-frF"/>
                         <outlet property="agentCodeField" destination="v8w-hM-mUT" id="FpA-61-ntR"/>
                         <outlet property="agentNameField" destination="oze-gW-Vwc" id="Ge3-BB-cf8"/>
-                        <outlet property="agentTypeField" destination="729-Yd-9yQ" id="55m-Hq-zWz"/>
+                        <outlet property="ansOneField" destination="Rk0-sN-0n0" id="BzM-qp-yxO"/>
+                        <outlet property="ansThreeField" destination="bHZ-xw-Ecc" id="HjW-ab-Cgc"/>
+                        <outlet property="ansTwoField" destination="B0z-Wx-hrX" id="GSa-RP-VxV"/>
                         <outlet property="changePwdField" destination="Em3-90-KqB" id="Dky-AL-i96"/>
                         <outlet property="cntcNoField" destination="3gc-Vc-beN" id="RWC-fq-KJS"/>
                         <outlet property="emailField" destination="Erh-qk-chC" id="Kor-4N-A10"/>
@@ -486,43 +478,36 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Agent Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="qzP-jG-X39">
-                                        <rect key="frame" x="331" y="202" width="175" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Agent Contact No." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="YdC-ry-M78">
-                                        <rect key="frame" x="331" y="236" width="171" height="31"/>
+                                        <rect key="frame" x="331" y="208" width="171" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Immediate Leader Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="T6J-aC-AOq">
-                                        <rect key="frame" x="331" y="272" width="183" height="31"/>
+                                        <rect key="frame" x="331" y="244" width="183" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Immediate Leader's Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="GZu-o5-4CX">
-                                        <rect key="frame" x="331" y="307" width="207" height="31"/>
+                                        <rect key="frame" x="331" y="279" width="207" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Business Registration No." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="epI-03-KaB">
-                                        <rect key="frame" x="331" y="342" width="202" height="31"/>
+                                        <rect key="frame" x="331" y="314" width="202" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Email Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ksp-6D-jw1">
-                                        <rect key="frame" x="331" y="381" width="128" height="31"/>
+                                        <rect key="frame" x="331" y="353" width="128" height="30.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -540,44 +525,38 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Agent Type" minimumFontSize="17" id="97C-sP-LQE">
-                                        <rect key="frame" x="533" y="204" width="196" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contact Number" minimumFontSize="17" id="I2x-dt-ime">
-                                        <rect key="frame" x="533" y="240" width="196" height="31"/>
+                                        <rect key="frame" x="533" y="208" width="196" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Leader Code" minimumFontSize="17" id="6IP-lK-l83">
-                                        <rect key="frame" x="533" y="276" width="196" height="31"/>
+                                        <rect key="frame" x="533" y="244" width="196" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Leader's Name" minimumFontSize="17" id="mHM-gA-u8i">
-                                        <rect key="frame" x="533" y="313" width="196" height="31"/>
+                                        <rect key="frame" x="533" y="281" width="196" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Registration No" minimumFontSize="17" id="cB0-G6-90y">
-                                        <rect key="frame" x="533" y="349" width="196" height="31"/>
+                                        <rect key="frame" x="533" y="317" width="196" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" id="v3p-sB-RkB">
-                                        <rect key="frame" x="533" y="386" width="196" height="31"/>
+                                        <rect key="frame" x="533" y="354" width="196" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="oga-dy-zYt">
-                                        <rect key="frame" x="699" y="471" width="187" height="37"/>
+                                        <rect key="frame" x="699" y="437" width="187" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Submit" backgroundImage="button.png">
@@ -638,7 +617,6 @@
                     <connections>
                         <outlet property="agentCodeField" destination="7lT-LB-TWZ" id="y4d-9z-Vx5"/>
                         <outlet property="agentNameField" destination="oQP-IC-tKP" id="tYy-Br-tpu"/>
-                        <outlet property="agentTypeField" destination="97C-sP-LQE" id="q3f-mt-G6U"/>
                         <outlet property="contactNoField" destination="I2x-dt-ime" id="pwb-NG-wuw"/>
                         <outlet property="emailField" destination="v3p-sB-RkB" id="mSo-vQ-xtN"/>
                         <outlet property="leaderCodeField" destination="6IP-lK-l83" id="G18-VP-vgO"/>
@@ -1162,7 +1140,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="20" width="540" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Please Answer Security Questions* (at least 1 to be correct)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="m40-JI-kJq">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Please Answer Security Questions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" highlighted="YES" id="m40-JI-kJq">
                                 <rect key="frame" x="20" y="89" width="452" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1170,67 +1148,15 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="dB4-IC-u9N">
-                                <rect key="frame" x="303" y="136" width="211" height="31"/>
+                                <rect key="frame" x="303" y="143" width="211" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="AEG-x0-OW5">
-                                <rect key="frame" x="303" y="168" width="211" height="31"/>
+                            <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Select your question" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="s4v-VZ-yW0">
+                                <rect key="frame" x="20" y="131" width="284" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Jsb-e9-ckj">
-                                <rect key="frame" x="303" y="201" width="211" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="5HW-nd-URF">
-                                <rect key="frame" x="303" y="234" width="211" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="BdJ-cA-dmS">
-                                <rect key="frame" x="303" y="267" width="211" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1. What is your mother's maiden name?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="s4v-VZ-yW0">
-                                <rect key="frame" x="20" y="130" width="275" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2. In what city was your father born?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="9y9-rt-Cby">
-                                <rect key="frame" x="20" y="162" width="275" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3. What was the name of your secondary school?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="anO-eX-9UI">
-                                <rect key="frame" x="20" y="195" width="275" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="4. What was the name of your secondary school?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ZTk-Oc-hId">
-                                <rect key="frame" x="20" y="228" width="275" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5. What was the name of your secondary school?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="3zR-ki-BcZ">
-                                <rect key="frame" x="20" y="261" width="275" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1245,6 +1171,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="doRetrieve:" destination="QjF-qX-HgA" eventType="touchUpInside" id="nbe-dg-pGy"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" id="x3z-Da-5dl">
                                 <rect key="frame" x="0.0" y="0.0" width="540" height="44"/>
@@ -1260,12 +1189,32 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="LQl-75-9ML">
+                                <rect key="frame" x="217" y="203" width="106" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="UTy-wL-DJk">
+                                <rect key="frame" x="151" y="237" width="238" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="ansField" destination="dB4-IC-u9N" id="kO1-3l-bRR"/>
+                        <outlet property="questLabel" destination="s4v-VZ-yW0" id="15y-Lt-d9x"/>
+                        <outlet property="statusLabelOne" destination="LQl-75-9ML" id="3tj-Ey-dxz"/>
+                        <outlet property="statusLabelTwo" destination="UTy-wL-DJk" id="xQ3-sZ-jdS"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-14046" y="-6042"/>
@@ -1854,7 +1803,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qW0-fB-E6L">
-                                <rect key="frame" x="667" y="427" width="96" height="37"/>
+                                <rect key="frame" x="685" y="427" width="96" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Add Rider">
@@ -1866,7 +1815,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NAW-GP-ifQ">
-                                <rect key="frame" x="548" y="427" width="102" height="37"/>
+                                <rect key="frame" x="566" y="427" width="102" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Save Rider">
@@ -1876,6 +1825,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="doSaveRider:" destination="awb-jX-mpP" eventType="touchUpInside" id="Yul-xG-bNj"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" id="w8H-Wr-bv8">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
@@ -1946,11 +1898,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HfB-g8-X20">
-                                <rect key="frame" x="367" y="119" width="379" height="31"/>
+                                <rect key="frame" x="385" y="119" width="396" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -1961,11 +1913,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TjJ-ZU-kZ6">
-                                <rect key="frame" x="367" y="158" width="379" height="31"/>
+                                <rect key="frame" x="385" y="158" width="396" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -1975,6 +1927,163 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <action selector="btnAddRiderPressed:" destination="awb-jX-mpP" eventType="touchUpInside" id="tmh-yG-jbQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rider Term" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="vcW-CA-WHm">
+                                <rect key="frame" x="76" y="202" width="120" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="PA Class" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="zdw-oE-qFr">
+                                <rect key="frame" x="76" y="241" width="120" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Units" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="oSk-ht-zqx">
+                                <rect key="frame" x="76" y="280" width="120" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="u9f-8v-HZC">
+                                <rect key="frame" x="205" y="202" width="127" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="awb-jX-mpP" id="MG1-2T-ZZm"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="QHi-E6-AiC">
+                                <rect key="frame" x="205" y="280" width="127" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="awb-jX-mpP" id="dWs-d9-nI0"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sum Assured (RM)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="lXq-fd-3lh">
+                                <rect key="frame" x="350" y="202" width="320" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="CPA Class" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="VPO-aA-0Jj">
+                                <rect key="frame" x="350" y="241" width="222" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Occp. Loading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="CxM-hP-xzg">
+                                <rect key="frame" x="350" y="280" width="192" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="uDU-HY-Pog">
+                                <rect key="frame" x="671" y="202" width="110" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="awb-jX-mpP" id="sxM-ZL-Y7j"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="7Jf-rt-fYX">
+                                <rect key="frame" x="671" y="241" width="110" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="9kX-F0-Rft">
+                                <rect key="frame" x="671" y="280" width="110" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Health Loading (%)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="UpX-BO-jcF">
+                                <rect key="frame" x="76" y="322" width="342" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="R7s-WN-Ek6">
+                                <rect key="frame" x="426" y="322" width="140" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="awb-jX-mpP" id="tPq-g0-ihc"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Health Loading (%) Term" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Vhl-3B-Sha">
+                                <rect key="frame" x="76" y="361" width="342" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1lB-Uo-qRn">
+                                <rect key="frame" x="426" y="361" width="140" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="awb-jX-mpP" id="hf4-Fp-FW3"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ma0-dZ-elb">
+                                <rect key="frame" x="205" y="241" width="127" height="31.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="planBtnPressed:" destination="awb-jX-mpP" eventType="touchUpInside" id="zRg-gY-QDv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2pq-Dw-SzC">
+                                <rect key="frame" x="205" y="280" width="127" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deducBtnPressed:" destination="awb-jX-mpP" eventType="touchUpInside" id="1oq-jx-zmv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Zzp-H3-ZkP">
+                                <rect key="frame" x="796" y="89" width="138" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="w7K-q6-1B5">
+                                <rect key="frame" x="796" y="112" width="138" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1982,9 +2091,28 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" id="Obp-nY-j47"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="HLField" destination="R7s-WN-Ek6" id="Pen-XT-Rrm"/>
+                        <outlet property="HLLabel" destination="UpX-BO-jcF" id="1jl-r5-M9W"/>
+                        <outlet property="HLTField" destination="1lB-Uo-qRn" id="zBL-rj-HDu"/>
+                        <outlet property="HLTLabel" destination="Vhl-3B-Sha" id="ZwI-C2-NDw"/>
                         <outlet property="btnAddRider" destination="TjJ-ZU-kZ6" id="cpI-9n-7FL"/>
                         <outlet property="btnPType" destination="HfB-g8-X20" id="lYE-IX-XnC"/>
+                        <outlet property="cpaField" destination="7Jf-rt-fYX" id="xjb-ia-de6"/>
+                        <outlet property="cpaLabel" destination="VPO-aA-0Jj" id="5IL-9O-SU8"/>
+                        <outlet property="deducBtn" destination="2pq-Dw-SzC" id="dYw-Ls-jZh"/>
+                        <outlet property="maxDisplayLabel" destination="w7K-q6-1B5" id="agq-0Z-0eZ"/>
+                        <outlet property="minDisplayLabel" destination="Zzp-H3-ZkP" id="BKA-kq-nPY"/>
+                        <outlet property="occpField" destination="9kX-F0-Rft" id="37x-zD-04a"/>
+                        <outlet property="occpLabel" destination="CxM-hP-xzg" id="W2G-8a-zsT"/>
+                        <outlet property="planBtn" destination="ma0-dZ-elb" id="xmh-5I-krq"/>
+                        <outlet property="planLabel" destination="zdw-oE-qFr" id="6VR-qm-Gj8"/>
                         <outlet property="riderBtn" destination="CAs-x8-fGT" id="z8y-7Q-zM7"/>
+                        <outlet property="sumField" destination="uDU-HY-Pog" id="T0D-gw-ATC"/>
+                        <outlet property="sumLabel" destination="lXq-fd-3lh" id="7Hq-bx-t1e"/>
+                        <outlet property="termField" destination="u9f-8v-HZC" id="EDU-Ll-ZUG"/>
+                        <outlet property="termLabel" destination="vcW-CA-WHm" id="Kiq-uk-6I4"/>
+                        <outlet property="unitField" destination="QHi-E6-AiC" id="uYU-Up-mD4"/>
+                        <outlet property="unitLabel" destination="oSk-ht-zqx" id="eI2-n1-diX"/>
                     </connections>
                 </viewController>
             </objects>
@@ -2054,7 +2182,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Advance Yearly Income (Age)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontSizeToFit="NO" id="L2u-4W-M5G">
-                                <rect key="frame" x="80" y="337" width="312" height="43"/>
+                                <rect key="frame" x="80" y="389" width="312" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -2071,8 +2199,20 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <action selector="incomeSegmentPressed:" destination="Ljf-y2-AQV" eventType="valueChanged" id="M3G-mh-yGT"/>
                                 </connections>
                             </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" id="Mv8-HY-rHV">
+                                <rect key="frame" x="385" y="337" width="289" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Accumulation"/>
+                                    <segment title="Pay Out"/>
+                                </segments>
+                                <connections>
+                                    <action selector="cashDividendSegmentPressed:" destination="Ljf-y2-AQV" eventType="valueChanged" id="g2m-zz-0dZ"/>
+                                    <action selector="incomeSegmentPressed:" destination="Ljf-y2-AQV" eventType="valueChanged" id="epG-tB-Gt8"/>
+                                </connections>
+                            </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" id="Fgp-g2-BAf">
-                                <rect key="frame" x="385" y="337" width="287" height="44"/>
+                                <rect key="frame" x="385" y="389" width="287" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="No"/>
@@ -2116,6 +2256,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <action selector="MOPSegmentPressed:" destination="Ljf-y2-AQV" eventType="valueChanged" id="doB-Ie-IJd"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Cash Dividend" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontSizeToFit="NO" id="uSA-KT-Wn3">
+                                <rect key="frame" x="82" y="337" width="267" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="43p-zr-Esd">
                                 <rect key="frame" x="385" y="161" width="97" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2145,7 +2292,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hdj-zB-DPu">
-                                <rect key="frame" x="717" y="344" width="142" height="37"/>
+                                <rect key="frame" x="717" y="396" width="142" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Calculate Premium" backgroundImage="button.png">
@@ -2242,7 +2389,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" id="tZn-jK-xQ0">
-                                <rect key="frame" x="140" y="469" width="709" height="188"/>
+                                <rect key="frame" x="140" y="521" width="709" height="188"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Health Loading (Per 1k SA)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" id="dEq-Sd-pua">
@@ -2301,7 +2448,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lYa-h3-aOy">
-                                <rect key="frame" x="68" y="426" width="64" height="37"/>
+                                <rect key="frame" x="68" y="478" width="64" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="SHOW" backgroundImage="button.png">
@@ -2316,7 +2463,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Add Health Loading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="kIu-ft-Kyd">
-                                <rect key="frame" x="171" y="426" width="356" height="38"/>
+                                <rect key="frame" x="171" y="478" width="356" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -2330,15 +2477,19 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="HLField" destination="UVJ-zn-aYh" id="n47-gi-xpW"/>
+                        <outlet property="HLTermField" destination="QpQ-b3-C3f" id="dbH-hg-tOT"/>
                         <outlet property="MOPSegment" destination="1mM-tw-qRp" id="T5O-Ac-zAT"/>
                         <outlet property="advanceIncomeSegment" destination="Fgp-g2-BAf" id="pcX-yd-Nk1"/>
                         <outlet property="basicPlanBtn" destination="SJJ-1p-6Bv" id="Czz-a8-FQY"/>
                         <outlet property="btnHealthLoading" destination="lYa-h3-aOy" id="reH-nb-kCM"/>
+                        <outlet property="cashDividendSegment" destination="Mv8-HY-rHV" id="QwC-5w-elP"/>
                         <outlet property="healthLoadingView" destination="tZn-jK-xQ0" id="Jxw-Zh-Nfr"/>
                         <outlet property="incomeSegment" destination="0bt-1x-cxf" id="chW-Rh-zZO"/>
                         <outlet property="maxSALabel" destination="dka-wW-4cX" id="41v-BS-2pQ"/>
                         <outlet property="minSALabel" destination="qCd-92-CNh" id="g4v-ca-cZL"/>
                         <outlet property="planField" destination="w2k-jJ-feA" id="BrE-x8-Ccf"/>
+                        <outlet property="tempHLField" destination="oUC-cp-bXb" id="Omg-gL-hP0"/>
+                        <outlet property="tempHLTermField" destination="cAp-zZ-3wB" id="k2X-B0-s89"/>
                         <outlet property="termField" destination="43p-zr-Esd" id="nz5-17-RHu"/>
                         <outlet property="yearlyIncomeField" destination="PHX-gh-ECO" id="LjY-7w-GF7"/>
                     </connections>
@@ -5635,6 +5786,198 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="login.png" width="200" height="30"/>
         <image name="menu.png" width="200" height="30"/>
     </resources>
+    <classes>
+        <class className="BasicPlanViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicPlanViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="MOPSegmentPressed:"/>
+                <relationship kind="action" name="advanceIncomeSegmentPressed:"/>
+                <relationship kind="action" name="btnShowHealthLoadingPressed:"/>
+                <relationship kind="action" name="calculatePressed:"/>
+                <relationship kind="action" name="cashDividendSegmentPressed:"/>
+                <relationship kind="action" name="goHomePressed:"/>
+                <relationship kind="action" name="incomeSegmentPressed:"/>
+                <relationship kind="outlet" name="HLField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="HLTermField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="MOPSegment" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="advanceIncomeSegment" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="basicPlanBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnHealthLoading" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="cashDividendSegment" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="healthLoadingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="incomeSegment" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="maxSALabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="minSALabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="planField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="tempHLField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="tempHLTermField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="termField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="yearlyIncomeField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ChangePwdViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChangePwdViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="changePwdBtnPressed:"/>
+                <relationship kind="action" name="doCancelChange:"/>
+                <relationship kind="outlet" name="msgLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="oldPwdField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="pwdNewField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="retypeNewPwdField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ForgotPwdViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ForgotPwdViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doCancelForgot:"/>
+                <relationship kind="action" name="doRetrieve:"/>
+                <relationship kind="outlet" name="ansField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="questLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="statusLabelOne" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="statusLabelTwo" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ListingTbViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ListingTbViewController.h"/>
+        </class>
+        <class className="MainMenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainMenuViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="changePwdBtnPressed:"/>
+                <relationship kind="action" name="doLogout:"/>
+                <relationship kind="outlet" name="welcomeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NewLAViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewLAViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnDOBPressed:"/>
+                <relationship kind="action" name="btnOccDone:"/>
+                <relationship kind="action" name="btnOccPressed:"/>
+                <relationship kind="action" name="datePickerValueChanged:"/>
+                <relationship kind="action" name="doSaveLA:"/>
+                <relationship kind="action" name="goHome:"/>
+                <relationship kind="action" name="payorBtnPressed:"/>
+                <relationship kind="action" name="secondLAPressed:"/>
+                <relationship kind="action" name="selectProspect:"/>
+                <relationship kind="action" name="sexSegmentPressed:"/>
+                <relationship kind="action" name="smokerSegmentPressed:"/>
+                <relationship kind="outlet" name="LAAgeField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="LACPAField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="LACommencementDateField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="LANameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="LAOccLoadingField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="LAOccSearchField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="LAPAField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="btnDOB" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnOccp" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="datePickerView" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="lifeAssuredBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="myScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="occPickerView" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="pickerToolbar" candidateClass="UIToolbar"/>
+                <relationship kind="outlet" name="sexSegment" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="smokerSegment" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="PayorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PayorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doClosePayor:"/>
+            </relationships>
+        </class>
+        <class className="ProfilesDetailsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfilesDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelBtnPressed:"/>
+                <relationship kind="action" name="doSave:"/>
+                <relationship kind="outlet" name="QOneLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="QThreeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="QTwoLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="agentCodeField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="agentNameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="ansOneField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="ansThreeField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="ansTwoField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="changePwdField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="cntcNoField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="emailField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="leaderCodeField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="leaderNameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="myScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="oldPwdField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="registrationNoField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="retypePwdField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="statusLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="RiderViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RiderViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnAddRiderPressed:"/>
+                <relationship kind="action" name="btnPTypePressed:"/>
+                <relationship kind="action" name="deducBtnPressed:"/>
+                <relationship kind="action" name="doSaveRider:"/>
+                <relationship kind="action" name="homePressed:"/>
+                <relationship kind="action" name="planBtnPressed:"/>
+                <relationship kind="outlet" name="HLField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="HLLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="HLTField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="HLTLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="btnAddRider" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnPType" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="cpaField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="cpaLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="deducBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="maxDisplayLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="minDisplayLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="occpField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="occpLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="planBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="planLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="riderBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="sumField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="sumLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="termField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="termLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="unitField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="unitLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SecondLAViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondLAViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doCloseView:"/>
+            </relationships>
+        </class>
+        <class className="UserProfileViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserProfileViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doCancel:"/>
+                <relationship kind="action" name="doSaveEdit:"/>
+                <relationship kind="outlet" name="agentCodeField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="agentNameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="contactNoField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="emailField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="leaderCodeField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="leaderNameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="loginIDLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="myScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="registerNoField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="statusLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doLogin:"/>
+                <relationship kind="outlet" name="forgotPwdLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollViewLogin" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>
@@ -5643,8 +5986,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     <inferredMetricsTieBreakers>
         <segue reference="AU7-in-XMa"/>
         <segue reference="zeL-G3-GWo"/>
-        <segue reference="fDF-4g-eUN"/>
         <segue reference="vmM-kr-hrG"/>
+        <segue reference="fDF-4g-eUN"/>
         <segue reference="IlD-c6-w44"/>
     </inferredMetricsTieBreakers>
 </document>

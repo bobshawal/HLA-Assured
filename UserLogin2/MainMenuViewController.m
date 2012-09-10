@@ -31,12 +31,6 @@
     welcomeLabel.text = [NSString stringWithFormat:@"User : %@",[self.userRequest description]];
 }
 
-- (void)viewDidUnload
-{
-    [self setWelcomeLabel:nil];
-    [super viewDidUnload];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return YES;
@@ -113,6 +107,12 @@
 }
 
 #pragma mark - Memory management
+
+- (void)viewDidUnload
+{
+    [self setWelcomeLabel:nil];
+    [super viewDidUnload];
+}
 
 - (void)dealloc {
     [welcomeLabel release];

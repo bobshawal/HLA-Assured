@@ -18,8 +18,15 @@
     ListingTbViewController *listingPopVC;
 }
 
+//request from previous
 @property (nonatomic, assign,readwrite) int indexNo;
 @property (nonatomic,strong) id agenID;
+@property (nonatomic,strong) id requestSINo;
+
+@property (nonatomic, copy) NSString *clientName;
+@property (nonatomic, copy) NSString *occuCode;
+@property (nonatomic, copy) NSString *occuDesc;
+@property (nonatomic, copy) NSString *commencementDate;
 
 //LA Field
 @property (retain, nonatomic) IBOutlet UITextField *LANameField;
@@ -59,10 +66,7 @@
 @property (retain, nonatomic) IBOutlet UIPickerView *occPickerView;
 @property (retain, nonatomic) IBOutlet UIDatePicker *datePickerView;
 @property (retain, nonatomic) IBOutlet UIToolbar *pickerToolbar;
-
-//menu btn
 @property (retain, nonatomic) IBOutlet UIButton *lifeAssuredBtn;
-
 @property (nonatomic, retain) UIPopoverController *popoverController;
 
 - (IBAction)sexSegmentPressed:(id)sender;

@@ -22,8 +22,6 @@
 		NSArray *dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *docsDir = [dirPaths objectAtIndex:0];
         databasePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent: @"hladb.sqlite"]];
-        
-        [self getRiderListing];
 	}
 	return self;
 }
@@ -31,6 +29,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"RIDERLIST ptype:%@, seq:%d",[self.requestPtype description],self.requestSeq);
+    
+    [self getRiderListing];
 }
 
 
@@ -48,11 +49,8 @@
     sqlite3_stmt *statement;
     if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
     {
-        /*
-        NSString *querySQL = [NSString stringWithFormat: @"SELECT a.RiderCode,b.RiderDesc FROM tbl_SI_Trad_RiderComb a LEFT JOIN tbl_SI_Trad_Rider_Profile b ON a.RiderCode=b.RiderCode WHERE a.PlanCode=\"%@\" AND a.PTypeCode=\"%@\" AND a.SeqNo=\"%d\"",[self.requestPlanCode description],[self.requestPtype description],self.requestSeq];
-         */
-        
-        NSString *querySQL = [NSString stringWithFormat: @"SELECT a.RiderCode,b.RiderDesc FROM tbl_SI_Trad_RiderComb a LEFT JOIN tbl_SI_Trad_Rider_Profile b ON a.RiderCode=b.RiderCode WHERE a.PlanCode=\"HLAIB\" AND a.PTypeCode=\"LA\" AND a.SeqNo=1"];
+        NSString *querySQL = [NSString stringWithFormat:
+            @"SELECT a.RiderCode,b.RiderDesc FROM tbl_SI_Trad_RiderComb a LEFT JOIN tbl_SI_Trad_Rider_Profile b ON a.RiderCode=b.RiderCode WHERE a.PlanCode=\"HLAIB\" AND a.PTypeCode=\"%@\" AND a.SeqNo=\"%d\"",[self.requestPtype description],self.requestSeq];
         
         const char *query_stmt = [querySQL UTF8String];
         if (sqlite3_prepare_v2(contactDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)

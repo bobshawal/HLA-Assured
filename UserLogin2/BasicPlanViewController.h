@@ -13,20 +13,21 @@
     NSString *databasePath;
     sqlite3 *contactDB;
     BOOL showHL;
-    UITextField *activeField;
 }
 @property (retain, nonatomic) IBOutlet UIButton *basicPlanBtn;
 
+//request from previous
 @property (nonatomic, assign,readwrite) int indexNo;
 @property (nonatomic,strong) id agenID;
 @property (nonatomic, assign,readwrite) int ageClient;
 @property (nonatomic,strong) id requestSINo;
 
-
 @property (nonatomic, assign,readwrite) int termCover;
 @property (nonatomic, assign,readwrite) int minSA;
 @property (nonatomic, assign,readwrite) int maxSA;
 @property (nonatomic,strong) NSString *planChoose;
+@property (nonatomic,strong) NSString *planCode;
+@property (nonatomic,strong) NSString *SINoPlan;
 
 //screen field
 @property (retain, nonatomic) IBOutlet UITextField *planField;
@@ -39,14 +40,34 @@
 @property (retain, nonatomic) IBOutlet UISegmentedControl *MOPSegment;
 @property (retain, nonatomic) IBOutlet UISegmentedControl *incomeSegment;
 @property (retain, nonatomic) IBOutlet UISegmentedControl *advanceIncomeSegment;
+@property (retain, nonatomic) IBOutlet UISegmentedControl *cashDividendSegment;
 @property (retain, nonatomic) IBOutlet UITextField *HLField;
+@property (retain, nonatomic) IBOutlet UITextField *HLTermField;
+@property (retain, nonatomic) IBOutlet UITextField *tempHLField;
+@property (retain, nonatomic) IBOutlet UITextField *tempHLTermField;
 
 //use to calculate
 @property (nonatomic, assign,readwrite) int MOP;
 @property (nonatomic, copy) NSString *yearlyIncome;
+@property (nonatomic, copy) NSString *cashDividend;
 @property (nonatomic, assign,readwrite) int advanceYearlyIncome;
 @property (nonatomic, assign,readwrite) int basicRate;
 @property (nonatomic, assign,readwrite) int LSDRate;
+@property (nonatomic, assign,readwrite) int riderRate;
+@property(nonatomic , retain) NSMutableArray *riderCode;
+@property(nonatomic , retain) NSMutableArray *riderSA;
+@property(nonatomic , retain) NSMutableArray *riderHL1K;
+@property(nonatomic , retain) NSMutableArray *riderHL100;
+@property(nonatomic , retain) NSMutableArray *riderHLP;
+
+//to display
+@property (nonatomic,strong) NSString *getSINo;
+@property (nonatomic,assign,readwrite) int getPolicyTerm;
+@property (nonatomic,assign,readwrite) int getSumAssured;
+@property (nonatomic,copy) NSString *getHL;
+@property (nonatomic,copy) NSString *getTempHL;
+@property (nonatomic,assign,readwrite) int getTempHLTerm;
+@property (nonatomic,assign,readwrite) int getHLTerm;
 
 - (IBAction)goHomePressed:(id)sender;
 - (IBAction)btnShowHealthLoadingPressed:(id)sender;
@@ -54,7 +75,9 @@
 - (IBAction)MOPSegmentPressed:(id)sender;
 - (IBAction)incomeSegmentPressed:(id)sender;
 - (IBAction)advanceIncomeSegmentPressed:(id)sender;
+- (IBAction)cashDividendSegmentPressed:(id)sender;
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
+-(void)keyboardDidHide:(NSNotificationCenter *)notification;
 
 @end

@@ -15,13 +15,24 @@
 @implementation RiderPTypeTbViewController
 @synthesize delegate,ptype,seqNo,desc,requestSINo,selectedCode,selectedDesc,selectedSeqNo;
 
+-(id)init
+{
+    self = [super init];
+	if (self != nil) {
+		NSArray *dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *docsDir = [dirPaths objectAtIndex:0];
+        databasePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent: @"hladb.sqlite"]];
+	}
+	return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    NSArray *dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *docsDir = [dirPaths objectAtIndex:0];
-    databasePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent: @"hladb.sqlite"]];
+    NSLog(@"RIDERPTYPE SINo:%@",[self.requestSINo description]);
+    
+    [self getPersonType];
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -41,6 +52,7 @@
     {
         NSString *querySQL = [NSString stringWithFormat:
                               @"SELECT a.PTypeCode,a.Sequence,b.PTypeDesc FROM tbl_SI_Trad_LAPayor a LEFT JOIN tbl_Adm_PersonType b ON a.PTypeCode=b.PTypeCode AND a.Sequence=b.Seq WHERE a.SINo=\"%@\"",[self.requestSINo description]];
+        
         const char *query_stmt = [querySQL UTF8String];
         if (sqlite3_prepare_v2(contactDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
         {

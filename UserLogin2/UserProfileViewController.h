@@ -23,7 +23,6 @@
 //input field
 @property (retain, nonatomic) IBOutlet UITextField *agentCodeField;
 @property (retain, nonatomic) IBOutlet UITextField *agentNameField;
-@property (retain, nonatomic) IBOutlet UITextField *agentTypeField;
 @property (retain, nonatomic) IBOutlet UITextField *contactNoField;
 @property (retain, nonatomic) IBOutlet UITextField *leaderCodeField;
 @property (retain, nonatomic) IBOutlet UITextField *leaderNameField;
@@ -37,7 +36,6 @@
 @property (nonatomic, copy) NSString *username;
 @property (nonatomic, copy) NSString *code;
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *type;
 @property (nonatomic, copy) NSString *contactNo;
 @property (nonatomic, copy) NSString *leaderCode;
 @property (nonatomic, copy) NSString *leaderName;

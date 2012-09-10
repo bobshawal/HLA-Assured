@@ -37,10 +37,12 @@
 @synthesize btnOccp;
 @synthesize sex,smoker,age,SINo,SIDate,SILastNo,CustCode,ANB,CustDate,CustLastNo,DOB,jobDesc;
 @synthesize occDesc,occCode,occLoading,occCPA,occPA;
-@synthesize agenID,popoverController;
+@synthesize agenID,popoverController,requestSINo,clientName,occuCode,commencementDate,occuDesc;
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+    
     NSArray *dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *docsDir = [dirPaths objectAtIndex:0];
     databasePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent: @"hladb.sqlite"]];
@@ -55,7 +57,15 @@
     
     [self toogleView];
     [self getOccDesc];
-    [super viewDidLoad];
+    
+    if (self.requestSINo) {
+        [self checkingExisting];
+        if (SINo.length != 0) {
+            [self getSavedField];
+        }
+    } else {
+        NSLog(@"SINo not exist!");
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -111,6 +121,8 @@
     return YES;
 }
 
+#pragma mark - ToogleView
+
 -(void)toogleView
 {
     NSLog(@"sex:%@",sex);
@@ -118,9 +130,35 @@
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd-MM-yyyy"];
-    NSString *commencementDate = [dateFormatter stringFromDate:[NSDate date]];
+    NSString *commencementDateStr = [dateFormatter stringFromDate:[NSDate date]];
     [dateFormatter release];
-    LACommencementDateField.text = [[NSString alloc]initWithFormat:@"%@",commencementDate];
+    LACommencementDateField.text = [[NSString alloc]initWithFormat:@"%@",commencementDateStr];
+}
+
+-(void)getSavedField
+{
+    LANameField.text = clientName;
+    [self.btnDOB setTitle:DOB forState:UIControlStateNormal];
+    LAAgeField.text = [[NSString alloc] initWithFormat:@"%d",age];
+    LACommencementDateField.text = commencementDate;
+
+    if ([sex isEqualToString:@"M"]) {
+        sexSegment.selectedSegmentIndex = 0;
+    } else if ([sex isEqualToString:@"F"]) {
+        sexSegment.selectedSegmentIndex = 1;
+    }
+    
+    if ([smoker isEqualToString:@"Y"]) {
+        smokerSegment.selectedSegmentIndex = 0;
+    } else if ([smoker isEqualToString:@"N"]) {
+        smokerSegment.selectedSegmentIndex = 1;
+    }
+    
+    [self getOccCodeLoading];
+    [self.btnOccp setTitle:occuDesc forState:UIControlStateNormal];
+    LAOccLoadingField.text = occLoading;
+    LACPAField.text = occCPA;
+    LAPAField.text = occPA;
 }
 
 #pragma mark - Action
@@ -287,7 +325,8 @@
 	}
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     
     if ([[segue identifier] isEqualToString:@"goBasicPlan"]) {
         
@@ -307,7 +346,7 @@
     }
 }
 
-#pragma mark - Handle Data/calculation
+#pragma mark - Handle Data
 
 -(void)getRunningSI
 {
@@ -442,6 +481,92 @@
     }
 }
 
+-(void)getOccDesc
+{
+    occCode = [[NSMutableArray alloc] init];
+    occDesc = [[NSMutableArray alloc] init];
+    
+    const char *dbpath = [databasePath UTF8String];
+    sqlite3_stmt *statement;
+    if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
+    {
+        NSString *querySQL = [NSString stringWithFormat: @"SELECT OccpCode,OccpDesc from tbl_Adm_Occp"];
+        
+        const char *query_stmt = [querySQL UTF8String];
+        if (sqlite3_prepare_v2(contactDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            while (sqlite3_step(statement) == SQLITE_ROW)
+            {
+                [occCode addObject:[[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 0)]];
+                [occDesc addObject:[[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 1)]];
+            }
+            sqlite3_finalize(statement);
+        }
+        sqlite3_close(contactDB);
+    }
+}
+
+-(void)getOccLoading
+{
+    NSInteger row = [occPickerView selectedRowInComponent:0];
+    NSString *code = [occCode objectAtIndex:row];
+    NSLog(@"code:%@",code);
+    
+    const char *dbpath = [databasePath UTF8String];
+    sqlite3_stmt *statement;
+    if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
+    {
+        NSString *querySQL = [NSString stringWithFormat: @"SELECT OccpLoading,CPA,PA from tbl_Adm_Occp_Loading where OccpCode = \"%@\"",code];
+        
+        const char *query_stmt = [querySQL UTF8String];
+        if (sqlite3_prepare_v2(contactDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            if (sqlite3_step(statement) == SQLITE_ROW)
+            {
+                occLoading = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 0)];
+                occCPA  = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 1)];
+                occPA = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 2)];
+                
+                LAOccLoadingField.text = occLoading;
+                LACPAField.text = occCPA;
+                LAPAField.text = occPA;
+            }
+            else {
+                NSLog(@"Error retrieve loading!");
+            }
+            sqlite3_finalize(statement);
+        }
+        sqlite3_close(contactDB);
+    }
+}
+
+-(void)getOccCodeLoading
+{
+    const char *dbpath = [databasePath UTF8String];
+    sqlite3_stmt *statement;
+    if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
+    {
+        NSString *querySQL = [NSString stringWithFormat: @"SELECT a.OccpCode,b.OccpDesc,a.OccpLoading,a.CPA,a.PA from tbl_Adm_Occp_Loading a LEFT JOIN tbl_Adm_Occp b ON a.OccpCode=b.OccpCode where a.OccpCode = \"%@\"",occuCode];
+        
+        const char *query_stmt = [querySQL UTF8String];
+        if (sqlite3_prepare_v2(contactDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            if (sqlite3_step(statement) == SQLITE_ROW)
+            {
+                occuDesc = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 1)];
+                occLoading = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 2)];
+                occCPA  = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 3)];
+                occPA = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 4)];
+            }
+            else {
+                NSLog(@"Error retrieve loading!");
+            }
+            sqlite3_finalize(statement);
+        }
+        sqlite3_close(contactDB);
+    }
+}
+
 -(void)insertData
 {
     [self getRunningSI];
@@ -461,14 +586,13 @@
     NSInteger row = [occPickerView selectedRowInComponent:0];
     NSString *code = [occCode objectAtIndex:row];
     
-    
     sqlite3_stmt *statement;
     const char *dbpath = [databasePath UTF8String];
     
     if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
     {
         NSString *insertSQL = [NSString stringWithFormat:
-                            @"INSERT INTO tbl_SI_Trad_LAPayor (SINo, CustCode,PTypeCode,Sequence,DateCreated,CreatedBy) VALUES (\"%@\",\"%@\",\"LA\",\"1\",\"%@\",\"%@\")",SINo, CustCode,LACommencementDateField.text,[self.agenID description]];
+                               @"INSERT INTO tbl_SI_Trad_LAPayor (SINo, CustCode,PTypeCode,Sequence,DateCreated,CreatedBy) VALUES (\"%@\",\"%@\",\"LA\",\"1\",\"%@\",\"%@\")",SINo, CustCode,LACommencementDateField.text,[self.agenID description]];
         
         const char *insert_stmt = [insertSQL UTF8String];
         if(sqlite3_prepare_v2(contactDB, insert_stmt, -1, &statement, NULL) == SQLITE_OK) {
@@ -482,7 +606,7 @@
         }
         
         NSString *insertSQL2 = [NSString stringWithFormat:
-                               @"INSERT INTO tbl_Clt_Profile (CustCode,Name,Smoker,Sex,DOB,ALB,ANB,OccpCode,DateCreated,CreatedBy) VALUES (\"%@\",\"%@\",\"%@\",\"%@\",\"%@\",\"%d\",\"%d\",\"%@\",\"%@\",\"%@\")",CustCode,LANameField.text,smoker,sex, DOB,age,ANB,code,LACommencementDateField.text,[self.agenID description]];
+                    @"INSERT INTO tbl_Clt_Profile (CustCode, Name, Smoker, Sex, DOB, ALB, ANB, OccpCode, DateCreated, CreatedBy) VALUES (\"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%d\", \"%d\", \"%@\", \"%@\", \"%@\")", CustCode, LANameField.text, smoker, sex, DOB, age, ANB, code, LACommencementDateField.text, [self.agenID description]];
         
         const char *insert_stmt2 = [insertSQL2 UTF8String];
         if(sqlite3_prepare_v2(contactDB, insert_stmt2, -1, &statement, NULL) == SQLITE_OK) {
@@ -494,10 +618,43 @@
             }
             sqlite3_finalize(statement);
         }
-        
         sqlite3_close(contactDB);
     }
 }
+
+-(void)checkingExisting
+{
+    const char *dbpath = [databasePath UTF8String];
+    sqlite3_stmt *statement;
+    if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
+    {
+        NSString *querySQL = [NSString stringWithFormat:
+                @"SELECT a.SINo, a.CustCode, b.Name, b.Smoker, b.Sex, b.DOB, b.ALB, b.OccpCode, b.DateCreated FROM tbl_SI_Trad_LAPayor a LEFT JOIN tbl_Clt_Profile b ON a.CustCode=b.CustCode WHERE a.SINo=\"%@\" AND a.PTypeCode=\"LA\" AND a.Sequence=1",[self.requestSINo description]];
+        
+        const char *query_stmt = [querySQL UTF8String];
+        if (sqlite3_prepare_v2(contactDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            if (sqlite3_step(statement) == SQLITE_ROW)
+            {
+                SINo = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 0)];
+                CustCode = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 1)];
+                clientName = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 2)];
+                smoker = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 3)];
+                sex = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 4)];
+                DOB = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 5)];
+                age = sqlite3_column_int(statement, 6);
+                occuCode = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 7)];
+                commencementDate = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 8)];
+            } else {
+                NSLog(@"error access tbl_SI_Trad_LAPayor");
+            }
+            sqlite3_finalize(statement);
+        }
+        sqlite3_close(contactDB);
+    }
+}
+
+#pragma mark - calculation
 
 -(void)calculateAge
 {
@@ -567,65 +724,6 @@
     NSLog(@"ANB:%d",ANB);
 }
 
--(void)getOccDesc
-{
-    occCode = [[NSMutableArray alloc] init];
-    occDesc = [[NSMutableArray alloc] init];
-    
-    const char *dbpath = [databasePath UTF8String];
-    sqlite3_stmt *statement;
-    if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
-    {
-        NSString *querySQL = [NSString stringWithFormat: @"SELECT OccpCode,OccpDesc from tbl_Adm_Occp"];
-        
-        const char *query_stmt = [querySQL UTF8String];
-        if (sqlite3_prepare_v2(contactDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
-        {
-            while (sqlite3_step(statement) == SQLITE_ROW)
-            {
-                [occCode addObject:[[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 0)]];
-                [occDesc addObject:[[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 1)]];
-            }
-            sqlite3_finalize(statement);
-        }
-        sqlite3_close(contactDB);
-    }
-}
-
--(void)getOccLoading
-{
-    NSInteger row = [occPickerView selectedRowInComponent:0];
-    NSString *code = [occCode objectAtIndex:row];
-    NSLog(@"code:%@",code);
-    
-    const char *dbpath = [databasePath UTF8String];
-    sqlite3_stmt *statement;
-    if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
-    {
-        NSString *querySQL = [NSString stringWithFormat: @"SELECT OccpLoading,CPA,PA from tbl_Adm_Occp_Loading where OccpCode = \"%@\"",code];
-        
-        const char *query_stmt = [querySQL UTF8String];
-        if (sqlite3_prepare_v2(contactDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
-        {
-            if (sqlite3_step(statement) == SQLITE_ROW)
-            {
-                occLoading = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 0)];
-                occCPA  = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 1)];
-                occPA = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 2)];
-                
-                LAOccLoadingField.text = occLoading;
-                LACPAField.text = occCPA;
-                LAPAField.text = occPA;
-            }
-            else {
-                NSLog(@"Error retrieve loading!");
-            }
-            sqlite3_finalize(statement);
-        }
-        sqlite3_close(contactDB);
-    }
-}
-
 #pragma mark - Picker Management
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
@@ -676,11 +774,21 @@
     [self setBtnOccp:nil];
     [self setDOB:nil];
     [self setJobDesc:nil];
+    [self setRequestSINo:nil];
+    [self setClientName:nil];
+    [self setOccuCode:nil];
+    [self setCommencementDate:nil];
+    [self setOccuDesc:nil];
     [super viewDidUnload];
 }
 
 - (void)dealloc 
 {
+    [occuDesc release];
+    [commencementDate release];
+    [occuCode release];
+    [clientName release];
+    [requestSINo release];
     [LANameField release];
     [sexSegment release];
     [smokerSegment release];

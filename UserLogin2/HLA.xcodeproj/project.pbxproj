@@ -28,7 +28,8 @@
 		C4BD872515B51BEC00DFFB95 /* Untitled.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BD871C15B51BEC00DFFB95 /* Untitled.png */; };
 		EF17D1BD15EDAF2900A7C0BC /* RiderPTypeTbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF17D1BC15EDAF2900A7C0BC /* RiderPTypeTbViewController.m */; };
 		EF17D1C215EDB99300A7C0BC /* RiderListTbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF17D1C115EDB99300A7C0BC /* RiderListTbViewController.m */; };
-		EF17D1C415EDD50800A7C0BC /* hladb.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = EF17D1C315EDD50800A7C0BC /* hladb.sqlite */; };
+		EF17D1CB15EE085C00A7C0BC /* SecurityQuesTbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF17D1CA15EE085C00A7C0BC /* SecurityQuesTbViewController.m */; };
+		EF17D20C15EF694700A7C0BC /* RetreivePwdTbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF17D20B15EF694700A7C0BC /* RetreivePwdTbViewController.m */; };
 		EF1B6C4F15C8DE2000E4E9B3 /* BasicPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1B6C4E15C8DE2000E4E9B3 /* BasicPlanViewController.m */; };
 		EF35FF9B15C8FB290004E66A /* RiderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF35FF9A15C8FB290004E66A /* RiderViewController.m */; };
 		EF65D49115C62C3400F0815C /* NewLAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF65D49015C62C3400F0815C /* NewLAViewController.m */; };
@@ -46,10 +47,12 @@
 		EFBBDF2315B51D8A009E8BB1 /* topbar.png in Resources */ = {isa = PBXBuildFile; fileRef = EFBBDF2215B51D8A009E8BB1 /* topbar.png */; };
 		EFBBDF2515B51D95009E8BB1 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = EFBBDF2415B51D95009E8BB1 /* login.png */; };
 		EFBBDF2715B51DBC009E8BB1 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = EFBBDF2615B51DBC009E8BB1 /* header.png */; };
+		EFD0DAFA15F5EB0500A8A2C7 /* RiderFormTbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD0DAF915F5EB0500A8A2C7 /* RiderFormTbViewController.m */; };
 		EFD24D0D15BE94E60028CDC9 /* iconHLwithbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD24D0C15BE94E50028CDC9 /* iconHLwithbackground.png */; };
 		EFDA467F15B52CCA002F712A /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDA467E15B52CCA002F712A /* MainMenuViewController.m */; };
 		EFDA469615B55FF7002F712A /* ForgotPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDA469515B55FF7002F712A /* ForgotPwdViewController.m */; };
 		EFDA469E15B64D9E002F712A /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDA469D15B64D9E002F712A /* UserProfileViewController.m */; };
+		EFE980A915F882E9006F21CB /* hladb.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = EFE980A815F882E9006F21CB /* hladb.sqlite */; };
 		EFF05E7B15D1041000D7F3D0 /* ListingTbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF05E7A15D1041000D7F3D0 /* ListingTbViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +86,10 @@
 		EF17D1BC15EDAF2900A7C0BC /* RiderPTypeTbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RiderPTypeTbViewController.m; path = ../RiderPTypeTbViewController.m; sourceTree = "<group>"; };
 		EF17D1C015EDB99300A7C0BC /* RiderListTbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RiderListTbViewController.h; path = ../RiderListTbViewController.h; sourceTree = "<group>"; };
 		EF17D1C115EDB99300A7C0BC /* RiderListTbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RiderListTbViewController.m; path = ../RiderListTbViewController.m; sourceTree = "<group>"; };
-		EF17D1C315EDD50800A7C0BC /* hladb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = hladb.sqlite; sourceTree = "<group>"; };
+		EF17D1C915EE085C00A7C0BC /* SecurityQuesTbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecurityQuesTbViewController.h; path = ../SecurityQuesTbViewController.h; sourceTree = "<group>"; };
+		EF17D1CA15EE085C00A7C0BC /* SecurityQuesTbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecurityQuesTbViewController.m; path = ../SecurityQuesTbViewController.m; sourceTree = "<group>"; };
+		EF17D20A15EF694600A7C0BC /* RetreivePwdTbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RetreivePwdTbViewController.h; path = ../RetreivePwdTbViewController.h; sourceTree = "<group>"; };
+		EF17D20B15EF694700A7C0BC /* RetreivePwdTbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RetreivePwdTbViewController.m; path = ../RetreivePwdTbViewController.m; sourceTree = "<group>"; };
 		EF1B6C4D15C8DE2000E4E9B3 /* BasicPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicPlanViewController.h; path = ../BasicPlanViewController.h; sourceTree = "<group>"; };
 		EF1B6C4E15C8DE2000E4E9B3 /* BasicPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicPlanViewController.m; path = ../BasicPlanViewController.m; sourceTree = "<group>"; };
 		EF35FF9915C8FB290004E66A /* RiderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RiderViewController.h; path = ../RiderViewController.h; sourceTree = "<group>"; };
@@ -107,6 +113,8 @@
 		EFBBDF2215B51D8A009E8BB1 /* topbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topbar.png; sourceTree = "<group>"; };
 		EFBBDF2415B51D95009E8BB1 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		EFBBDF2615B51DBC009E8BB1 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
+		EFD0DAF815F5EB0500A8A2C7 /* RiderFormTbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RiderFormTbViewController.h; path = ../RiderFormTbViewController.h; sourceTree = "<group>"; };
+		EFD0DAF915F5EB0500A8A2C7 /* RiderFormTbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RiderFormTbViewController.m; path = ../RiderFormTbViewController.m; sourceTree = "<group>"; };
 		EFD24D0C15BE94E50028CDC9 /* iconHLwithbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconHLwithbackground.png; path = UserLogin2/iconHLwithbackground.png; sourceTree = "<group>"; };
 		EFDA467D15B52CCA002F712A /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenuViewController.h; path = ../MainMenuViewController.h; sourceTree = "<group>"; };
 		EFDA467E15B52CCA002F712A /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainMenuViewController.m; path = ../MainMenuViewController.m; sourceTree = "<group>"; };
@@ -114,6 +122,7 @@
 		EFDA469515B55FF7002F712A /* ForgotPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForgotPwdViewController.m; path = ../ForgotPwdViewController.m; sourceTree = "<group>"; };
 		EFDA469C15B64D9E002F712A /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserProfileViewController.h; path = ../UserProfileViewController.h; sourceTree = "<group>"; };
 		EFDA469D15B64D9E002F712A /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserProfileViewController.m; path = ../UserProfileViewController.m; sourceTree = "<group>"; };
+		EFE980A815F882E9006F21CB /* hladb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = hladb.sqlite; sourceTree = "<group>"; };
 		EFF05E7915D1041000D7F3D0 /* ListingTbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListingTbViewController.h; path = ../ListingTbViewController.h; sourceTree = "<group>"; };
 		EFF05E7A15D1041000D7F3D0 /* ListingTbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingTbViewController.m; path = ../ListingTbViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,7 +215,7 @@
 		C44332B215B3FA1F005E185B /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				EF17D1C315EDD50800A7C0BC /* hladb.sqlite */,
+				EFE980A815F882E9006F21CB /* hladb.sqlite */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -249,10 +258,16 @@
 		EF17D1BF15EDAF4900A7C0BC /* Dropdown */ = {
 			isa = PBXGroup;
 			children = (
+				EF17D1C915EE085C00A7C0BC /* SecurityQuesTbViewController.h */,
+				EF17D1CA15EE085C00A7C0BC /* SecurityQuesTbViewController.m */,
+				EF17D20A15EF694600A7C0BC /* RetreivePwdTbViewController.h */,
+				EF17D20B15EF694700A7C0BC /* RetreivePwdTbViewController.m */,
 				EF17D1BB15EDAF2900A7C0BC /* RiderPTypeTbViewController.h */,
 				EF17D1BC15EDAF2900A7C0BC /* RiderPTypeTbViewController.m */,
 				EF17D1C015EDB99300A7C0BC /* RiderListTbViewController.h */,
 				EF17D1C115EDB99300A7C0BC /* RiderListTbViewController.m */,
+				EFD0DAF815F5EB0500A8A2C7 /* RiderFormTbViewController.h */,
+				EFD0DAF915F5EB0500A8A2C7 /* RiderFormTbViewController.m */,
 			);
 			name = Dropdown;
 			sourceTree = "<group>";
@@ -365,7 +380,7 @@
 				EFD24D0D15BE94E60028CDC9 /* iconHLwithbackground.png in Resources */,
 				EF65D4A715C6544600F0815C /* house.png in Resources */,
 				EF65D4B515C6767C00F0815C /* header-repeted.png in Resources */,
-				EF17D1C415EDD50800A7C0BC /* hladb.sqlite in Resources */,
+				EFE980A915F882E9006F21CB /* hladb.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +407,9 @@
 				EFF05E7B15D1041000D7F3D0 /* ListingTbViewController.m in Sources */,
 				EF17D1BD15EDAF2900A7C0BC /* RiderPTypeTbViewController.m in Sources */,
 				EF17D1C215EDB99300A7C0BC /* RiderListTbViewController.m in Sources */,
+				EF17D1CB15EE085C00A7C0BC /* SecurityQuesTbViewController.m in Sources */,
+				EF17D20C15EF694700A7C0BC /* RetreivePwdTbViewController.m in Sources */,
+				EFD0DAFA15F5EB0500A8A2C7 /* RiderFormTbViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

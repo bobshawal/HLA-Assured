@@ -19,22 +19,12 @@
 @synthesize myScrollView;
 @synthesize agentCodeField;
 @synthesize agentNameField;
-@synthesize agentTypeField;
 @synthesize contactNoField;
 @synthesize leaderCodeField;
 @synthesize leaderNameField;
 @synthesize registerNoField;
 @synthesize emailField;
-@synthesize indexNo,username,code,name,type,contactNo,leaderCode,leaderName,email,registerNo;
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize indexNo,username,code,name,contactNo,leaderCode,leaderName,email,registerNo;
 
 - (void)viewDidLoad
 {
@@ -48,31 +38,6 @@
     NSLog(@"receive Index:%d",self.indexNo);
     
     loginIDLabel.text = [NSString stringWithFormat:@"%@",[self.idRequest description]];
-}
-
-- (void)viewDidUnload
-{
-    [self setMyScrollView:nil];
-    [self setAgentCodeField:nil];
-    [self setAgentNameField:nil];
-    [self setAgentTypeField:nil];
-    [self setContactNoField:nil];
-    [self setLeaderCodeField:nil];
-    [self setLeaderNameField:nil];
-    [self setRegisterNoField:nil];
-    [self setEmailField:nil];
-    [self setUsername:nil];
-    [self setCode:nil];
-    [self setName:nil];
-    [self setType:nil];
-    [self setContactNo:nil];
-    [self setLeaderCode:nil];
-    [self setLeaderName:nil];
-    [self setEmail:nil];
-    [self setRegisterNo:nil];
-    [self setStatusLabel:nil];
-    [self setLoginIDLabel:nil];
-    [super viewDidUnload];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -128,38 +93,13 @@
     }
 }
 
-- (void)dealloc 
-{
-    [myScrollView release];
-    [agentCodeField release];
-    [agentNameField release];
-    [agentTypeField release];
-    [contactNoField release];
-    [leaderCodeField release];
-    [leaderNameField release];
-    [registerNoField release];
-    [emailField release];
-    [username release];
-    [code release];
-    [name release];
-    [type release];
-    [contactNo release];
-    [leaderCode release];
-    [leaderName release];
-    [email release];
-    [registerNo release];
-    [statusLabel release];
-    [loginIDLabel release];
-    [super dealloc];
-}
-
 -(void)viewExisting
 {
     const char *dbpath = [databasePath UTF8String];
     sqlite3_stmt *statement;
     if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
     {
-        NSString *querySQL = [NSString stringWithFormat:@"SELECT IndexNo,AgentLoginID,AgentCode,AgentName,AgentType,AgentContactNo,ImmediateLeaderCode,ImmediateLeaderName,BusinessRegNumber,AgentEmail FROM tbl_Agent_Profile WHERE IndexNo=\"%d\"",self.indexNo];
+        NSString *querySQL = [NSString stringWithFormat:@"SELECT IndexNo,AgentLoginID,AgentCode,AgentName,AgentContactNo,ImmediateLeaderCode,ImmediateLeaderName,BusinessRegNumber,AgentEmail FROM tbl_Agent_Profile WHERE IndexNo=\"%d\"",self.indexNo];
         
         const char *query_stmt = [querySQL UTF8String];
         
@@ -175,27 +115,23 @@
                 const char *name2 = (const char*)sqlite3_column_text(statement, 3);
                 name = name2 == NULL ? nil : [[NSString alloc] initWithUTF8String:name2];
                 
-                const char *type2 = (const char*)sqlite3_column_text(statement, 4);
-                type = type2 == NULL ? nil : [[NSString alloc] initWithUTF8String:type2];
-                
-                const char *contactNo2 = (const char*)sqlite3_column_text(statement, 5);
+                const char *contactNo2 = (const char*)sqlite3_column_text(statement, 4);
                 contactNo = contactNo2 == NULL ? nil : [[NSString alloc] initWithUTF8String:contactNo2];
                 
-                const char *leaderCode2 = (const char*)sqlite3_column_text(statement, 6);
+                const char *leaderCode2 = (const char*)sqlite3_column_text(statement, 5);
                 leaderCode = leaderCode2 == NULL ? nil : [[NSString alloc] initWithUTF8String:leaderCode2];
                 
-                const char *leaderName2 = (const char*)sqlite3_column_text(statement, 7);
+                const char *leaderName2 = (const char*)sqlite3_column_text(statement, 6);
                 leaderName = leaderName2 == NULL ? nil : [[NSString alloc] initWithUTF8String:leaderName2];
                 
-                const char *register2 = (const char*)sqlite3_column_text(statement, 8);
+                const char *register2 = (const char*)sqlite3_column_text(statement, 7);
                 registerNo = register2 == NULL ? nil : [[NSString alloc] initWithUTF8String:register2];
                 
-                const char *email2 = (const char*)sqlite3_column_text(statement, 9);
+                const char *email2 = (const char*)sqlite3_column_text(statement, 8);
                 email = email2 == NULL ? nil : [[NSString alloc] initWithUTF8String:email2];
                 
                 agentCodeField.text = code;
                 agentNameField.text = name;
-                agentTypeField.text = type;
                 contactNoField.text = contactNo;
                 leaderCodeField.text = leaderCode;
                 leaderNameField.text = leaderName;
@@ -241,7 +177,7 @@
     
     if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
     {
-        NSString *querySQL = [NSString stringWithFormat:@"UPDATE tbl_Agent_Profile SET AgentCode= \"%@\",AgentName= \"%@\",AgentType= \"%@\",AgentContactNo= \"%@\",ImmediateLeaderCode= \"%@\",ImmediateLeaderName= \"%@\",BusinessRegNumber = \"%@\",AgentEmail= \"%@\" WHERE IndexNo=\"%d\"",agentCodeField.text,agentNameField.text,agentTypeField.text,contactNoField.text,leaderCodeField.text,leaderNameField.text,registerNoField.text,emailField.text,self.indexNo];
+        NSString *querySQL = [NSString stringWithFormat:@"UPDATE tbl_Agent_Profile SET AgentCode= \"%@\",AgentName= \"%@\",AgentContactNo= \"%@\",ImmediateLeaderCode= \"%@\",ImmediateLeaderName= \"%@\",BusinessRegNumber = \"%@\",AgentEmail= \"%@\" WHERE IndexNo=\"%d\"",agentCodeField.text,agentNameField.text,contactNoField.text,leaderCodeField.text,leaderNameField.text,registerNoField.text,emailField.text,self.indexNo];
         
 //        NSLog(@"%@",querySQL);
         
@@ -264,6 +200,54 @@
         }
         sqlite3_close(contactDB);
     }
+}
+
+#pragma mark - memory management
+
+- (void)viewDidUnload
+{
+    [self setMyScrollView:nil];
+    [self setAgentCodeField:nil];
+    [self setAgentNameField:nil];
+    [self setContactNoField:nil];
+    [self setLeaderCodeField:nil];
+    [self setLeaderNameField:nil];
+    [self setRegisterNoField:nil];
+    [self setEmailField:nil];
+    [self setUsername:nil];
+    [self setCode:nil];
+    [self setName:nil];
+    [self setContactNo:nil];
+    [self setLeaderCode:nil];
+    [self setLeaderName:nil];
+    [self setEmail:nil];
+    [self setRegisterNo:nil];
+    [self setStatusLabel:nil];
+    [self setLoginIDLabel:nil];
+    [super viewDidUnload];
+}
+
+- (void)dealloc
+{
+    [myScrollView release];
+    [agentCodeField release];
+    [agentNameField release];
+    [contactNoField release];
+    [leaderCodeField release];
+    [leaderNameField release];
+    [registerNoField release];
+    [emailField release];
+    [username release];
+    [code release];
+    [name release];
+    [contactNo release];
+    [leaderCode release];
+    [leaderName release];
+    [email release];
+    [registerNo release];
+    [statusLabel release];
+    [loginIDLabel release];
+    [super dealloc];
 }
 
 @end
