@@ -38,10 +38,10 @@
 @synthesize btnPType;
 @synthesize btnAddRider;
 @synthesize riderBtn;
-@synthesize indexNo,agenID,requestPlanCode,requestSINo,requestAge,requestCoverTerm;
+@synthesize indexNo,agenID,requestPlanCode,requestSINo,requestAge,requestCoverTerm,requestBasicSA;
 @synthesize pTypeCode,PTypeSeq,pTypeDesc,riderCode,riderDesc,popOverConroller;
 @synthesize FLabelCode,FLabelDesc,FRidName,FInputCode,FFieldName,FTbName,FCondition;
-@synthesize expAge,minSATerm,maxSATerm,minTerm,maxTerm,maxRiderTerm,planCode,SINoPlan,planOption,deductible;
+@synthesize expAge,minSATerm,maxSATerm,minTerm,maxTerm,maxRiderTerm,planCode,SINoPlan,planOption,deductible,maxRiderSA;
 @synthesize inputHL1KSA,inputHL1KSATerm,inputHL100SA,inputHL100SATerm,inputHLPercentage,inputHLPercentageTerm;
 
 #pragma mark - Cycle View
@@ -112,7 +112,7 @@
             
         case 2:
             minDisplayLabel.text = [NSString stringWithFormat:@"Min: %d",minSATerm];
-            maxDisplayLabel.text = [NSString stringWithFormat:@"Max: %d",maxSATerm];
+            maxDisplayLabel.text = [NSString stringWithFormat:@"Max: %.f",maxRiderSA];
             break;
             
         default:
@@ -129,7 +129,6 @@
 {
     NSUInteger i;
     for (i=0; i<[FLabelCode count]; i++) {
-//        NSLog(@"code:%@,input:%@,condition:%@",[FLabelCode objectAtIndex:i],[FInputCode objectAtIndex:i],[FCondition objectAtIndex:i]);
         
         if ([[FLabelCode objectAtIndex:i] isEqualToString:[NSString stringWithFormat:@"RITM"]]) {
             termLabel.text = [NSString stringWithFormat:@"%@",[FLabelDesc objectAtIndex:i]];
@@ -247,10 +246,31 @@
 
 -(void)calculateTerm
 {
-    int period;
-    period = expAge - self.requestAge;
-    maxRiderTerm = fmin(period,self.requestCoverTerm);
+    int period = expAge - self.requestAge;
+    int period2 = 80 - self.requestAge;
+    double age1 = fmin(period2,60);
+    
+    if ([riderCode isEqualToString:@"LCWP"]||[riderCode isEqualToString:@"PR"]||[riderCode isEqualToString:@"PLCP"]||
+        [riderCode isEqualToString:@"PTR"]||[riderCode isEqualToString:@"SP_STD"]||[riderCode isEqualToString:@"SP_PRE"]) {
+        maxRiderTerm = fmin(self.requestCoverTerm,age1);
+    } else {
+        maxRiderTerm = fmin(period,self.requestCoverTerm);
+    }
     NSLog(@"exp-alb:%d,covperiod:%d,maxRiderTerm:%.f",period,self.requestCoverTerm,maxRiderTerm);
+}
+
+-(void)calculateSA
+{
+    int dblPseudoBSA = self.requestBasicSA / 0.05;
+    double dblPseudoBSA2 = dblPseudoBSA * 0.1;
+    if ([riderCode isEqualToString:@"CCTR"]) {
+        maxRiderSA = dblPseudoBSA * 5;
+    } else if ([riderCode isEqualToString:@"ETPD"]) {
+        maxRiderSA = fmin(dblPseudoBSA2,120000);
+    }
+    else {
+        maxRiderSA = maxSATerm;
+    }
 }
 
 #pragma mark - Action
@@ -312,7 +332,7 @@
         popView.delegate = self;
         [popView release];
 		
-		[popOverConroller setPopoverContentSize:CGSizeMake(350.0f, 400.0f)];
+		[popOverConroller setPopoverContentSize:CGSizeMake(600.0f, 400.0f)];
         [popOverConroller presentPopoverFromRect:CGRectMake(0, 0, 550, 600) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 	}
     else{
@@ -459,6 +479,7 @@
         HLTField.text = @"";
         
         [self.planBtn setTitle:[NSString stringWithFormat:@""] forState:UIControlStateNormal];
+        [self.deducBtn setTitle:[NSString stringWithFormat:@""] forState:UIControlStateNormal];
     }
     riderCode = [[NSString alloc] initWithFormat:@"%@",code];
     riderDesc = [[NSString alloc] initWithFormat:@"%@",desc];
@@ -549,6 +570,7 @@
                 NSLog(@"expiryAge:%d,minTerm:%d,maxTerm:%d,minSA:%d,maxSA:%d",expAge,minTerm,maxTerm,minSATerm,maxSATerm);
                 
                 [self calculateTerm];
+                [self calculateSA];
                 
             } else {
                 NSLog(@"error access Trad_Mtn");
@@ -571,7 +593,8 @@
     if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
     {
         NSString *insertSQL = [NSString stringWithFormat:
-        @"INSERT INTO Trad_Rider_Details (SINo,  RiderCode, PTypeCode, Seq, RiderTerm, SumAssured, PlanOption, Units, Deductible, HL1KSA, HL1KSATerm, HL100SA, HL100SATerm, HLPercentage, HLPercentageTerm, CreatedAt) VALUES (\"%@\", \"%@\", \"%@\", \"%d\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%d\", \"%@\", \"%d\", \"%@\", \"%d\", \"%@\")", SINoPlan,riderCode, pTypeCode, PTypeSeq, termField.text, sumField.text, planOption, unitField.text, deductible, inputHL1KSA, inputHL1KSATerm, inputHL100SA, inputHL100SATerm, inputHLPercentage, inputHL100SATerm, dateString];
+        @"INSERT INTO Trad_Rider_Details (SINo,  RiderCode, PTypeCode, Seq, RiderTerm, SumAssured, PlanOption, Units, Deductible, HL1KSA, HL1KSATerm, HL100SA, HL100SATerm, HLPercentage, HLPercentageTerm, CreatedAt) VALUES"
+        "(\"%@\", \"%@\", \"%@\", \"%d\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%@\", \"%d\", \"%@\", \"%d\", \"%@\", \"%d\", \"%@\")", SINoPlan,riderCode, pTypeCode, PTypeSeq, termField.text, sumField.text, planOption, unitField.text, deductible, inputHL1KSA, inputHL1KSATerm, inputHL100SA, inputHL100SATerm, inputHLPercentage, inputHL100SATerm, dateString];
 
         const char *insert_stmt = [insertSQL UTF8String];
         if(sqlite3_prepare_v2(contactDB, insert_stmt, -1, &statement, NULL) == SQLITE_OK) {

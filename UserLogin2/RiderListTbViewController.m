@@ -88,7 +88,8 @@
     }
     
     NSString *itemDesc = [ridDesc objectAtIndex:indexPath.row];
-	cell.textLabel.text = itemDesc;
+    NSString *itemcode = [ridCode objectAtIndex:indexPath.row];
+	cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",itemcode,itemDesc];
     
 	if (indexPath.row == selectedIndex) {
 		cell.accessoryType = UITableViewCellAccessoryCheckmark;

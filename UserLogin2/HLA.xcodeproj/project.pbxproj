@@ -37,6 +37,8 @@
 		EF65D4B515C6767C00F0815C /* header-repeted.png in Resources */ = {isa = PBXBuildFile; fileRef = EF65D4B415C6767C00F0815C /* header-repeted.png */; };
 		EF65D56715C7C87B00F0815C /* PayorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF65D56615C7C87B00F0815C /* PayorViewController.m */; };
 		EF65D56A15C7D1C300F0815C /* SecondLAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF65D56915C7D1C300F0815C /* SecondLAViewController.m */; };
+		EF6EBE3F15FEE26A00E1581A /* hladb.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = EF6EBE3E15FEE26A00E1581A /* hladb.sqlite */; };
+		EF6EBE4215FEE53100E1581A /* PremiumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6EBE4115FEE53100E1581A /* PremiumViewController.m */; };
 		EFADB8D815B7B61D001EA0EB /* ChangePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFADB8D715B7B61D001EA0EB /* ChangePwdViewController.m */; };
 		EFBBDF1615B51D48009E8BB1 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = EFBBDF1515B51D48009E8BB1 /* image.png */; };
 		EFBBDF1915B51D50009E8BB1 /* protectGlobe.png in Resources */ = {isa = PBXBuildFile; fileRef = EFBBDF1815B51D50009E8BB1 /* protectGlobe.png */; };
@@ -52,7 +54,6 @@
 		EFDA467F15B52CCA002F712A /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDA467E15B52CCA002F712A /* MainMenuViewController.m */; };
 		EFDA469615B55FF7002F712A /* ForgotPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDA469515B55FF7002F712A /* ForgotPwdViewController.m */; };
 		EFDA469E15B64D9E002F712A /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDA469D15B64D9E002F712A /* UserProfileViewController.m */; };
-		EFE980A915F882E9006F21CB /* hladb.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = EFE980A815F882E9006F21CB /* hladb.sqlite */; };
 		EFF05E7B15D1041000D7F3D0 /* ListingTbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF05E7A15D1041000D7F3D0 /* ListingTbViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,9 @@
 		EF65D56615C7C87B00F0815C /* PayorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PayorViewController.m; path = ../PayorViewController.m; sourceTree = "<group>"; };
 		EF65D56815C7D1C300F0815C /* SecondLAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondLAViewController.h; path = ../SecondLAViewController.h; sourceTree = "<group>"; };
 		EF65D56915C7D1C300F0815C /* SecondLAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondLAViewController.m; path = ../SecondLAViewController.m; sourceTree = "<group>"; };
+		EF6EBE3E15FEE26A00E1581A /* hladb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = hladb.sqlite; sourceTree = "<group>"; };
+		EF6EBE4015FEE53100E1581A /* PremiumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PremiumViewController.h; path = ../PremiumViewController.h; sourceTree = "<group>"; };
+		EF6EBE4115FEE53100E1581A /* PremiumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PremiumViewController.m; path = ../PremiumViewController.m; sourceTree = "<group>"; };
 		EFADB8D615B7B61D001EA0EB /* ChangePwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangePwdViewController.h; path = ../ChangePwdViewController.h; sourceTree = "<group>"; };
 		EFADB8D715B7B61D001EA0EB /* ChangePwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChangePwdViewController.m; path = ../ChangePwdViewController.m; sourceTree = "<group>"; };
 		EFBBDF1515B51D48009E8BB1 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
@@ -122,7 +126,6 @@
 		EFDA469515B55FF7002F712A /* ForgotPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForgotPwdViewController.m; path = ../ForgotPwdViewController.m; sourceTree = "<group>"; };
 		EFDA469C15B64D9E002F712A /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserProfileViewController.h; path = ../UserProfileViewController.h; sourceTree = "<group>"; };
 		EFDA469D15B64D9E002F712A /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserProfileViewController.m; path = ../UserProfileViewController.m; sourceTree = "<group>"; };
-		EFE980A815F882E9006F21CB /* hladb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = hladb.sqlite; sourceTree = "<group>"; };
 		EFF05E7915D1041000D7F3D0 /* ListingTbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListingTbViewController.h; path = ../ListingTbViewController.h; sourceTree = "<group>"; };
 		EFF05E7A15D1041000D7F3D0 /* ListingTbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingTbViewController.m; path = ../ListingTbViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -215,7 +218,7 @@
 		C44332B215B3FA1F005E185B /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				EFE980A815F882E9006F21CB /* hladb.sqlite */,
+				EF6EBE3E15FEE26A00E1581A /* hladb.sqlite */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -249,6 +252,8 @@
 				EF1B6C4E15C8DE2000E4E9B3 /* BasicPlanViewController.m */,
 				EF35FF9915C8FB290004E66A /* RiderViewController.h */,
 				EF35FF9A15C8FB290004E66A /* RiderViewController.m */,
+				EF6EBE4015FEE53100E1581A /* PremiumViewController.h */,
+				EF6EBE4115FEE53100E1581A /* PremiumViewController.m */,
 				EFF05E7915D1041000D7F3D0 /* ListingTbViewController.h */,
 				EFF05E7A15D1041000D7F3D0 /* ListingTbViewController.m */,
 			);
@@ -380,7 +385,7 @@
 				EFD24D0D15BE94E60028CDC9 /* iconHLwithbackground.png in Resources */,
 				EF65D4A715C6544600F0815C /* house.png in Resources */,
 				EF65D4B515C6767C00F0815C /* header-repeted.png in Resources */,
-				EFE980A915F882E9006F21CB /* hladb.sqlite in Resources */,
+				EF6EBE3F15FEE26A00E1581A /* hladb.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +415,7 @@
 				EF17D1CB15EE085C00A7C0BC /* SecurityQuesTbViewController.m in Sources */,
 				EF17D20C15EF694700A7C0BC /* RetreivePwdTbViewController.m in Sources */,
 				EFD0DAFA15F5EB0500A8A2C7 /* RiderFormTbViewController.m in Sources */,
+				EF6EBE4215FEE53100E1581A /* PremiumViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

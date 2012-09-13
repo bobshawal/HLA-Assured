@@ -58,6 +58,25 @@
     [self updateDateLogout];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"goUserProfile"]) {
+        
+        UserProfileViewController *userProfile = [segue destinationViewController];
+        userProfile.idRequest = [self.userRequest description];
+        userProfile.indexNo = self.indexNo;
+        
+    }
+    else if ([[segue identifier] isEqualToString:@"goLAScreen"]) {
+        
+        NewLAViewController *viewLA = [segue destinationViewController];
+        viewLA.indexNo = self.indexNo;
+        viewLA.agenID = [self.userRequest description];
+    }
+    
+}
+
+#pragma mark - db
+
 -(void)updateDateLogout
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -85,23 +104,6 @@
             sqlite3_finalize(statement);
         }
         sqlite3_close(contactDB);
-    }
-    
-}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([[segue identifier] isEqualToString:@"goUserProfile"]) {
-        
-        UserProfileViewController *userProfile = [segue destinationViewController];
-        userProfile.idRequest = [self.userRequest description];
-        userProfile.indexNo = self.indexNo;
-        
-    }
-    else if ([[segue identifier] isEqualToString:@"goLAScreen"]) {
-        
-        NewLAViewController *viewLA = [segue destinationViewController];
-        viewLA.indexNo = self.indexNo;
-        viewLA.agenID = [self.userRequest description];
     }
     
 }

@@ -60,6 +60,7 @@
 @property (nonatomic,strong) id requestSINo;
 @property (nonatomic, assign,readwrite) int requestCoverTerm;
 @property (nonatomic,strong) id requestPlanCode;
+@property (nonatomic, assign,readwrite) int requestBasicSA;
 
 //get from popover
 @property (nonatomic,copy) NSString *pTypeCode;
@@ -85,6 +86,7 @@
 @property (nonatomic, assign,readwrite) int minTerm;
 @property (nonatomic, assign,readwrite) int maxTerm;
 @property (nonatomic, assign,readwrite) double maxRiderTerm;
+@property (nonatomic, assign,readwrite) double maxRiderSA;
 @property (nonatomic,strong) NSString *planOption;
 @property (nonatomic,strong) NSString *deductible;
 @property (nonatomic,strong) NSString *inputHL1KSA;

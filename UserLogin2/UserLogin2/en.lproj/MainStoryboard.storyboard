@@ -2174,138 +2174,239 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Yearly Income" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontSizeToFit="NO" id="85v-V7-Fqx">
-                                <rect key="frame" x="80" y="286" width="156" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Advance Yearly Income (Age)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontSizeToFit="NO" id="L2u-4W-M5G">
-                                <rect key="frame" x="80" y="389" width="312" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" id="0bt-1x-cxf">
-                                <rect key="frame" x="385" y="286" width="289" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Accumulation"/>
-                                    <segment title="Pay Out"/>
-                                </segments>
-                                <connections>
-                                    <action selector="incomeSegmentPressed:" destination="Ljf-y2-AQV" eventType="valueChanged" id="M3G-mh-yGT"/>
-                                </connections>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" id="Mv8-HY-rHV">
-                                <rect key="frame" x="385" y="337" width="289" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Accumulation"/>
-                                    <segment title="Pay Out"/>
-                                </segments>
-                                <connections>
-                                    <action selector="cashDividendSegmentPressed:" destination="Ljf-y2-AQV" eventType="valueChanged" id="g2m-zz-0dZ"/>
-                                    <action selector="incomeSegmentPressed:" destination="Ljf-y2-AQV" eventType="valueChanged" id="epG-tB-Gt8"/>
-                                </connections>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" id="Fgp-g2-BAf">
-                                <rect key="frame" x="385" y="389" width="287" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="No"/>
-                                    <segment title=" 60"/>
-                                    <segment title="75"/>
-                                </segments>
-                                <connections>
-                                    <action selector="advanceIncomeSegmentPressed:" destination="Ljf-y2-AQV" eventType="valueChanged" id="1Bt-ZX-89p"/>
-                                </connections>
-                            </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Desired Yearly Income" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontSizeToFit="NO" id="IIa-dC-oq9">
-                                <rect key="frame" x="80" y="196" width="251" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Premium Payment Option" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontSizeToFit="NO" id="RCd-pw-RIB">
-                                <rect key="frame" x="80" y="235" width="267" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Policy Term" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontSizeToFit="NO" id="Yll-cq-4j4">
-                                <rect key="frame" x="80" y="161" width="151" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" id="1mM-tw-qRp">
-                                <rect key="frame" x="385" y="235" width="287" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="6 Years"/>
-                                    <segment title="9 Years"/>
-                                    <segment title="12 Years"/>
-                                </segments>
-                                <connections>
-                                    <action selector="MOPSegmentPressed:" destination="Ljf-y2-AQV" eventType="valueChanged" id="doB-Ie-IJd"/>
-                                </connections>
-                            </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Cash Dividend" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontSizeToFit="NO" id="uSA-KT-Wn3">
-                                <rect key="frame" x="82" y="337" width="267" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="43p-zr-Esd">
-                                <rect key="frame" x="385" y="161" width="97" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="PHX-gh-ECO">
-                                <rect key="frame" x="385" y="196" width="97" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Ljf-y2-AQV" id="XsM-fE-znv"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Basic Plan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Crq-ru-Q2k">
-                                <rect key="frame" x="80" y="123" width="112" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="w2k-jJ-feA">
-                                <rect key="frame" x="385" y="123" width="272" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hdj-zB-DPu">
-                                <rect key="frame" x="717" y="396" width="142" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Calculate Premium" backgroundImage="button.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="calculatePressed:" destination="Ljf-y2-AQV" eventType="touchUpInside" id="dhE-Y0-9CP"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="zeS-CD-oXK">
+                                <rect key="frame" x="0.0" y="95" width="1024" height="653"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Basic Plan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Crq-ru-Q2k">
+                                        <rect key="frame" x="80" y="20" width="112" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="w2k-jJ-feA">
+                                        <rect key="frame" x="384" y="20" width="272" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Policy Term" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontSizeToFit="NO" id="Yll-cq-4j4">
+                                        <rect key="frame" x="80" y="56" width="151" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="43p-zr-Esd">
+                                        <rect key="frame" x="384" y="56" width="97" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="PHX-gh-ECO">
+                                        <rect key="frame" x="384" y="92" width="97" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Ljf-y2-AQV" id="XsM-fE-znv"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Advance Yearly Income (Age)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontSizeToFit="NO" id="L2u-4W-M5G">
+                                        <rect key="frame" x="80" y="273" width="301" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="qCd-92-CNh">
+                                        <rect key="frame" x="500" y="77" width="150" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="dka-wW-4cX">
+                                        <rect key="frame" x="500" y="99" width="150" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Premium Payment Option" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontSizeToFit="NO" id="RCd-pw-RIB">
+                                        <rect key="frame" x="80" y="129" width="267" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" id="1mM-tw-qRp">
+                                        <rect key="frame" x="384" y="129" width="287" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="6 Years"/>
+                                            <segment title="9 Years"/>
+                                            <segment title="12 Years"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="MOPSegmentPressed:" destination="Ljf-y2-AQV" eventType="valueChanged" id="doB-Ie-IJd"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Yearly Income" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontSizeToFit="NO" id="85v-V7-Fqx">
+                                        <rect key="frame" x="80" y="177" width="156" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" id="0bt-1x-cxf">
+                                        <rect key="frame" x="384" y="177" width="289" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="Accumulation"/>
+                                            <segment title="Pay Out"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="incomeSegmentPressed:" destination="Ljf-y2-AQV" eventType="valueChanged" id="M3G-mh-yGT"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Cash Dividend" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontSizeToFit="NO" id="uSA-KT-Wn3">
+                                        <rect key="frame" x="80" y="225" width="267" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" id="Mv8-HY-rHV">
+                                        <rect key="frame" x="384" y="225" width="289" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="Accumulation"/>
+                                            <segment title="Pay Out"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="cashDividendSegmentPressed:" destination="Ljf-y2-AQV" eventType="valueChanged" id="g2m-zz-0dZ"/>
+                                            <action selector="incomeSegmentPressed:" destination="Ljf-y2-AQV" eventType="valueChanged" id="epG-tB-Gt8"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" id="Fgp-g2-BAf">
+                                        <rect key="frame" x="384" y="273" width="287" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="No"/>
+                                            <segment title=" 60"/>
+                                            <segment title="75"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="advanceIncomeSegmentPressed:" destination="Ljf-y2-AQV" eventType="valueChanged" id="1Bt-ZX-89p"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hdj-zB-DPu">
+                                        <rect key="frame" x="717" y="282" width="142" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Calculate Premium" backgroundImage="button.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="calculatePressed:" destination="Ljf-y2-AQV" eventType="touchUpInside" id="dhE-Y0-9CP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lYa-h3-aOy">
+                                        <rect key="frame" x="62" y="326" width="64" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="SHOW" backgroundImage="button.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnShowHealthLoadingPressed:" destination="Ljf-y2-AQV" eventType="touchUpInside" id="XeO-BG-Gmb"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Add Health Loading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="kIu-ft-Kyd">
+                                        <rect key="frame" x="168" y="326" width="356" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" id="tZn-jK-xQ0">
+                                        <rect key="frame" x="115" y="367" width="694" height="152"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Health Loading (Per 1k SA)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" id="dEq-Sd-pua">
+                                                <rect key="frame" x="13" y="7" width="376" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="UVJ-zn-aYh">
+                                                <rect key="frame" x="456" y="7" width="218" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Health Loading (Per 1k SA) Term" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" id="ZII-FH-dhT">
+                                                <rect key="frame" x="13" y="42" width="386" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="QpQ-b3-C3f">
+                                                <rect key="frame" x="456" y="42" width="218" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Temporary Health Loading (Per 1k SA)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" id="2pN-Vc-2Ue">
+                                                <rect key="frame" x="13" y="77" width="376" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="oUC-cp-bXb">
+                                                <rect key="frame" x="456" y="77" width="218" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Temporary Health Loading (Per 1k SA) Term" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" id="vhg-fc-dwO">
+                                                <rect key="frame" x="13" y="113" width="435" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="cAp-zZ-3wB">
+                                                <rect key="frame" x="456" y="113" width="218" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Desired Yearly Income" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsFontSizeToFit="NO" id="IIa-dC-oq9">
+                                        <rect key="frame" x="80" y="92" width="251" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6fs-rH-ZZF">
                                 <rect key="frame" x="97" y="64" width="162" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2374,101 +2475,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="qCd-92-CNh">
-                                <rect key="frame" x="500" y="188" width="150" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="dka-wW-4cX">
-                                <rect key="frame" x="500" y="205" width="150" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" id="tZn-jK-xQ0">
-                                <rect key="frame" x="140" y="521" width="709" height="188"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Health Loading (Per 1k SA)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" id="dEq-Sd-pua">
-                                        <rect key="frame" x="18" y="20" width="376" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="UVJ-zn-aYh">
-                                        <rect key="frame" x="463" y="20" width="218" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Health Loading (Per 1k SA) Term" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" id="ZII-FH-dhT">
-                                        <rect key="frame" x="20" y="59" width="386" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="QpQ-b3-C3f">
-                                        <rect key="frame" x="463" y="59" width="218" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Temporary Health Loading (Per 1k SA)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" id="2pN-Vc-2Ue">
-                                        <rect key="frame" x="18" y="98" width="376" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="oUC-cp-bXb">
-                                        <rect key="frame" x="463" y="98" width="218" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Temporary Health Loading (Per 1k SA) Term" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" id="vhg-fc-dwO">
-                                        <rect key="frame" x="18" y="137" width="435" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="cAp-zZ-3wB">
-                                        <rect key="frame" x="463" y="137" width="218" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lYa-h3-aOy">
-                                <rect key="frame" x="68" y="478" width="64" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="SHOW" backgroundImage="button.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnShowHealthLoadingPressed:" destination="Ljf-y2-AQV" eventType="touchUpInside" id="XeO-BG-Gmb"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Add Health Loading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="kIu-ft-Kyd">
-                                <rect key="frame" x="171" y="478" width="356" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -2497,26 +2503,46 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="-10002" y="-6005"/>
         </scene>
-        <!--View Controller-->
+        <!--Premium View Controller-->
         <scene sceneID="m8r-UO-5NT">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g83-Or-fTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="VIz-pr-l4i" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="premiumView" id="VIz-pr-l4i" customClass="PremiumViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rtI-wo-Omw">
-                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
+                        <rect key="frame" x="0.0" y="20" width="540" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Basic Plan.png" id="ypH-KN-H2M">
-                                <rect key="frame" x="27" y="190" width="606" height="211"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <webView contentMode="scaleToFill" id="45j-UA-yWK">
+                                <rect key="frame" x="0.0" y="75" width="540" height="525"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" id="H0R-tw-9x9">
+                                <rect key="frame" x="0.0" y="0.0" width="540" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem id="d5T-k3-yWa">
+                                        <barButtonItem key="rightBarButtonItem" title="Close" id="Ksx-cM-HMD">
+                                            <connections>
+                                                <action selector="doClose:" destination="VIz-pr-l4i" id="ARi-w2-vDh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="WebView" destination="45j-UA-yWK" id="p60-Bj-PJO"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-8001" y="-6904"/>
+            <point key="canvasLocation" x="-8735" y="-5464"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5U5-64-lre">
@@ -5773,7 +5799,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </scenes>
     <resources>
         <image name="Additional Question.png" width="632" height="27"/>
-        <image name="Basic Plan.png" width="569" height="157"/>
         <image name="Listing.png" width="1237" height="72"/>
         <image name="Nominees:Trustees.png" width="764" height="33"/>
         <image name="Personal Details.png" width="760" height="72"/>
@@ -5786,198 +5811,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="login.png" width="200" height="30"/>
         <image name="menu.png" width="200" height="30"/>
     </resources>
-    <classes>
-        <class className="BasicPlanViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BasicPlanViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="MOPSegmentPressed:"/>
-                <relationship kind="action" name="advanceIncomeSegmentPressed:"/>
-                <relationship kind="action" name="btnShowHealthLoadingPressed:"/>
-                <relationship kind="action" name="calculatePressed:"/>
-                <relationship kind="action" name="cashDividendSegmentPressed:"/>
-                <relationship kind="action" name="goHomePressed:"/>
-                <relationship kind="action" name="incomeSegmentPressed:"/>
-                <relationship kind="outlet" name="HLField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="HLTermField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="MOPSegment" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="advanceIncomeSegment" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="basicPlanBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnHealthLoading" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="cashDividendSegment" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="healthLoadingView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="incomeSegment" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="maxSALabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="minSALabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="planField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="tempHLField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="tempHLTermField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="termField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="yearlyIncomeField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="ChangePwdViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChangePwdViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="changePwdBtnPressed:"/>
-                <relationship kind="action" name="doCancelChange:"/>
-                <relationship kind="outlet" name="msgLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="oldPwdField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="pwdNewField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="retypeNewPwdField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="ForgotPwdViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ForgotPwdViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doCancelForgot:"/>
-                <relationship kind="action" name="doRetrieve:"/>
-                <relationship kind="outlet" name="ansField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="questLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="statusLabelOne" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="statusLabelTwo" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ListingTbViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ListingTbViewController.h"/>
-        </class>
-        <class className="MainMenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainMenuViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="changePwdBtnPressed:"/>
-                <relationship kind="action" name="doLogout:"/>
-                <relationship kind="outlet" name="welcomeLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NewLAViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewLAViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="btnDOBPressed:"/>
-                <relationship kind="action" name="btnOccDone:"/>
-                <relationship kind="action" name="btnOccPressed:"/>
-                <relationship kind="action" name="datePickerValueChanged:"/>
-                <relationship kind="action" name="doSaveLA:"/>
-                <relationship kind="action" name="goHome:"/>
-                <relationship kind="action" name="payorBtnPressed:"/>
-                <relationship kind="action" name="secondLAPressed:"/>
-                <relationship kind="action" name="selectProspect:"/>
-                <relationship kind="action" name="sexSegmentPressed:"/>
-                <relationship kind="action" name="smokerSegmentPressed:"/>
-                <relationship kind="outlet" name="LAAgeField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="LACPAField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="LACommencementDateField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="LANameField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="LAOccLoadingField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="LAOccSearchField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="LAPAField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="btnDOB" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnOccp" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="datePickerView" candidateClass="UIDatePicker"/>
-                <relationship kind="outlet" name="lifeAssuredBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="myScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="occPickerView" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="pickerToolbar" candidateClass="UIToolbar"/>
-                <relationship kind="outlet" name="sexSegment" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="smokerSegment" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-        <class className="PayorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PayorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doClosePayor:"/>
-            </relationships>
-        </class>
-        <class className="ProfilesDetailsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfilesDetailsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelBtnPressed:"/>
-                <relationship kind="action" name="doSave:"/>
-                <relationship kind="outlet" name="QOneLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="QThreeLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="QTwoLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="agentCodeField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="agentNameField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="ansOneField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="ansThreeField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="ansTwoField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="changePwdField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="cntcNoField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="emailField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="leaderCodeField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="leaderNameField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="myScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="oldPwdField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="registrationNoField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="retypePwdField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="statusLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="RiderViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RiderViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="btnAddRiderPressed:"/>
-                <relationship kind="action" name="btnPTypePressed:"/>
-                <relationship kind="action" name="deducBtnPressed:"/>
-                <relationship kind="action" name="doSaveRider:"/>
-                <relationship kind="action" name="homePressed:"/>
-                <relationship kind="action" name="planBtnPressed:"/>
-                <relationship kind="outlet" name="HLField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="HLLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="HLTField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="HLTLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="btnAddRider" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnPType" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="cpaField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="cpaLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="deducBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="maxDisplayLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="minDisplayLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="occpField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="occpLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="planBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="planLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="riderBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="sumField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="sumLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="termField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="termLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="unitField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="unitLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SecondLAViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondLAViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doCloseView:"/>
-            </relationships>
-        </class>
-        <class className="UserProfileViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserProfileViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doCancel:"/>
-                <relationship kind="action" name="doSaveEdit:"/>
-                <relationship kind="outlet" name="agentCodeField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="agentNameField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="contactNoField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="emailField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="leaderCodeField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="leaderNameField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="loginIDLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="myScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="registerNoField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="statusLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doLogin:"/>
-                <relationship kind="outlet" name="forgotPwdLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="scrollViewLogin" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>
@@ -5986,8 +5819,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     <inferredMetricsTieBreakers>
         <segue reference="AU7-in-XMa"/>
         <segue reference="zeL-G3-GWo"/>
-        <segue reference="vmM-kr-hrG"/>
+        <segue reference="wlX-L3-D55"/>
         <segue reference="fDF-4g-eUN"/>
-        <segue reference="IlD-c6-w44"/>
+        <segue reference="vmM-kr-hrG"/>
     </inferredMetricsTieBreakers>
 </document>

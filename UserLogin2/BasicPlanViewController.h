@@ -26,7 +26,6 @@
 @property (nonatomic, assign,readwrite) int minSA;
 @property (nonatomic, assign,readwrite) int maxSA;
 @property (nonatomic,strong) NSString *planChoose;
-@property (nonatomic,strong) NSString *planCode;
 @property (nonatomic,strong) NSString *SINoPlan;
 
 //screen field
@@ -51,14 +50,8 @@
 @property (nonatomic, copy) NSString *yearlyIncome;
 @property (nonatomic, copy) NSString *cashDividend;
 @property (nonatomic, assign,readwrite) int advanceYearlyIncome;
-@property (nonatomic, assign,readwrite) int basicRate;
-@property (nonatomic, assign,readwrite) int LSDRate;
-@property (nonatomic, assign,readwrite) int riderRate;
-@property(nonatomic , retain) NSMutableArray *riderCode;
-@property(nonatomic , retain) NSMutableArray *riderSA;
-@property(nonatomic , retain) NSMutableArray *riderHL1K;
-@property(nonatomic , retain) NSMutableArray *riderHL100;
-@property(nonatomic , retain) NSMutableArray *riderHLP;
+@property (nonatomic, assign,readwrite) int basicRate;      //mark
+@property (nonatomic,strong) NSString *planCode;
 
 //to display
 @property (nonatomic,strong) NSString *getSINo;

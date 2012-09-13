@@ -10,6 +10,7 @@
 #import "RiderViewController.h"
 #import "MainMenuViewController.h"
 #import "NewLAViewController.h"
+#import "PremiumViewController.h"
 
 @interface BasicPlanViewController ()
 
@@ -33,9 +34,9 @@
 @synthesize tempHLTermField;
 @synthesize indexNo,agenID,ageClient,requestSINo,termCover,planChoose,maxSA,minSA,SINoPlan;
 @synthesize basicPlanBtn;
-@synthesize MOP,yearlyIncome,advanceYearlyIncome,basicRate,LSDRate,planCode,cashDividend,riderRate;
+@synthesize MOP,yearlyIncome,advanceYearlyIncome,basicRate,cashDividend;
 @synthesize getSINo,getSumAssured,getPolicyTerm,getHL,getHLTerm,getTempHL,getTempHLTerm;
-@synthesize riderHL1K,riderHL100,riderHLP,riderCode,riderSA;
+@synthesize planCode;
 
 #pragma mark - Cycle View
 
@@ -61,7 +62,10 @@
         [self checkingExisting];
         if (getSINo.length != 0) {
             NSLog(@"view selected field");
+            [self getExistingBasic];
             [self toogleExistingField];
+        } else {
+            NSLog(@"create new");
         }
     } else {
         NSLog(@"SINo not exist!");
@@ -133,8 +137,9 @@
         riderPlan.agenID = [self.agenID description];
         riderPlan.requestSINo = SINoPlan;
         riderPlan.requestAge = self.ageClient;
-        riderPlan.requestCoverTerm = self.termCover;
+        riderPlan.requestCoverTerm = termCover;
         riderPlan.requestPlanCode = planCode;
+        riderPlan.requestBasicSA = [yearlyIncomeField.text intValue];
     }
     else if ([[segue identifier] isEqualToString:@"basicGoLA"]) {
         
@@ -163,17 +168,14 @@
         [UIView animateWithDuration:0.5 animations:^{
             healthLoadingView.alpha = 0;
         }];
-        
         showHL = NO;
     }
     else {
         
         [self.btnHealthLoading setTitle:@"HIDE" forState:UIControlStateNormal];
-        
         [UIView animateWithDuration:0.5 animations:^{
             healthLoadingView.alpha = 1;
         }];
-        
         showHL = YES;
     }
 }
@@ -234,19 +236,13 @@
         //checking existing
         [self checkingExisting];
         if (!(getSINo)) {
+            NSLog(@"will save");
             [self saveBasicPlan];
         } else {
+            NSLog(@"will update");
             [self updateBasicPlan];
         }
-        
         [self getPlanCodePenta];
-        [self calculatePremium];
-        
-        [self checkExistRider];
-        if ([riderCode count] != 0) {
-            NSLog(@"rider exist!");
-            [self calculateRiderPrem];
-        }
     }
 }
 
@@ -289,7 +285,7 @@
     }
     
     if (getHLTerm != 0) {
-        HLTermField.text = [[NSString alloc] initWithFormat:@"%d",getHLTerm];
+        HLTermField.text = [NSString stringWithFormat:@"%d",getHLTerm];
     }
     
     if (getTempHL.length != 0) {
@@ -297,7 +293,7 @@
     }
     
     if (getTempHLTerm != 0) {
-        tempHLTermField.text = [[NSString alloc] initWithFormat:@"%d",getTempHLTerm];
+        tempHLTermField.text = [NSString stringWithFormat:@"%d",getTempHLTerm];
     }
 }
 
@@ -340,8 +336,30 @@
     sqlite3_stmt *statement;
     if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
     {
+        NSString *querySQL = [NSString stringWithFormat:@"SELECT SINo FROM Trad_Details WHERE SINo=\"%@\"",SINoPlan];
+        const char *query_stmt = [querySQL UTF8String];
+        if (sqlite3_prepare_v2(contactDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            if (sqlite3_step(statement) == SQLITE_ROW)
+            {
+                getSINo = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 0)];
+            } else {
+                NSLog(@"error access Trad_Details");
+            }
+            sqlite3_finalize(statement);
+        }
+        sqlite3_close(contactDB);
+    }
+}
+
+-(void)getExistingBasic
+{
+    const char *dbpath = [databasePath UTF8String];
+    sqlite3_stmt *statement;
+    if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
+    {
         NSString *querySQL = [NSString stringWithFormat:
-            @"SELECT SINo,PolicyTerm,BasicSA,PremiumPaymentOption,CashDividend,YearlyIncome,AdvanceYearlyIncome,HL1KSA, HL1KSATerm, TempHL1KSA, TempHL1KSATerm FROM Trad_Details WHERE SINo=\"%@\"",SINoPlan];
+                @"SELECT SINo,PolicyTerm,BasicSA,PremiumPaymentOption,CashDividend,YearlyIncome,AdvanceYearlyIncome,HL1KSA, HL1KSATerm, TempHL1KSA, TempHL1KSATerm FROM Trad_Details WHERE SINo=\"%@\"",SINoPlan];
         
         const char *query_stmt = [querySQL UTF8String];
         if (sqlite3_prepare_v2(contactDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
@@ -352,7 +370,7 @@
                 getPolicyTerm = sqlite3_column_int(statement, 1);
                 getSumAssured = sqlite3_column_int(statement, 2);
                 MOP = sqlite3_column_int(statement, 3);
-                cashDividend = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 4)];
+                cashDividend = [[NSString alloc ] initWithUTF8String:(const char *)sqlite3_column_text(statement, 4)];
                 yearlyIncome = [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 5)];
                 advanceYearlyIncome = sqlite3_column_int(statement, 6);
                 
@@ -387,7 +405,7 @@
     {
         NSString *insertSQL = [NSString stringWithFormat:
         @"INSERT INTO Trad_Details (SINo,  PlanCode, PTypeCode, Seq, PolicyTerm, BasicSA, PremiumPaymentOption, CashDividend, YearlyIncome, AdvanceYearlyIncome, HL1KSA, HL1KSATerm, TempHL1KSA, TempHL1KSATerm, CreatedAt) VALUES (\"%@\", \"HLAIB\", \"LA\", \"1\", \"%@\", \"%@\", \"%d\", \"%@\", \"%@\", \"%d\", \"%@\", \"%d\", \"%@\", \"%d\", \"%@\")", SINoPlan,  termField.text, yearlyIncomeField.text, MOP, cashDividend, yearlyIncome, advanceYearlyIncome, HLField.text, [HLTermField.text intValue], tempHLField.text, [tempHLTermField.text intValue], dateString];
-
+        
         const char *insert_stmt = [insertSQL UTF8String];
         if(sqlite3_prepare_v2(contactDB, insert_stmt, -1, &statement, NULL) == SQLITE_OK) {
             if (sqlite3_step(statement) == SQLITE_DONE)
@@ -446,32 +464,22 @@
             if (sqlite3_step(statement) == SQLITE_ROW)
             {
                 planCode =  [[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 0)];
-                NSLog(@"planCodePenta:%@",planCode);
+                
+                PremiumViewController *premView = [self.storyboard instantiateViewControllerWithIdentifier:@"premiumView"];
+                premView.modalPresentationStyle = UIModalPresentationFormSheet;
+                premView.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+                premView.requestPlanCode = planCode;
+                premView.requestSINo = SINoPlan;
+                premView.requestMOP = MOP;
+                premView.requestAge = self.ageClient;
+                premView.requestTerm = termCover;
+                premView.requestBasicSA = yearlyIncomeField.text;
+                premView.requestBasicHL = HLField.text;
+                [self presentModalViewController:premView animated:YES];
+                premView.view.superview.bounds = CGRectMake(0, 0, 650, 550);
+                
             } else {
                 NSLog(@"error access PentaPlanCode");
-            }
-            sqlite3_finalize(statement);
-        }
-        sqlite3_close(contactDB);
-    }
-}
-
--(void)getBasicPentaRate
-{
-    const char *dbpath = [databasePath UTF8String];
-    sqlite3_stmt *statement;
-    if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
-    {
-        NSString *querySQL = [NSString stringWithFormat: @"SELECT Rate FROM Trad_Sys_Basic_Prem WHERE PlanCode=\"%@\" AND FromTerm=\"%d\" AND FromMortality=0",planCode,termCover];
-        
-        const char *query_stmt = [querySQL UTF8String];
-        if (sqlite3_prepare_v2(contactDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
-        {
-            if (sqlite3_step(statement) == SQLITE_ROW)
-            {
-                basicRate =  sqlite3_column_int(statement, 0);
-            } else {
-                NSLog(@"error access Trad_Sys_Basic_Prem");
             }
             sqlite3_finalize(statement);
         }
@@ -504,199 +512,12 @@
     }
 }
 
--(void)getLSDRate
-{
-    const char *dbpath = [databasePath UTF8String];
-    sqlite3_stmt *statement;
-    if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
-    {
-        NSString *querySQL = [NSString stringWithFormat:
-                              @"SELECT LSD FROM tbl_SI_Trad_LSD_HLAIB WHERE PremPayOpt=\"%d\" AND FromSA <=\"%@\" AND ToSA >= \"%@\"",MOP,yearlyIncomeField.text,yearlyIncomeField.text];
-        
-        const char *query_stmt = [querySQL UTF8String];
-        if (sqlite3_prepare_v2(contactDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
-        {
-            if (sqlite3_step(statement) == SQLITE_ROW)
-            {
-                LSDRate =  sqlite3_column_int(statement, 0);
-                
-            } else {
-                NSLog(@"error access Trad_LSD_HLAIB");
-            }
-            sqlite3_finalize(statement);
-        }
-        sqlite3_close(contactDB);
-    }
-}
-
-/*------RiderPart----*/
-
--(void)checkExistRider
-{
-    riderCode = [[NSMutableArray alloc] init];
-    riderSA = [[NSMutableArray alloc] init];
-    riderHL1K = [[NSMutableArray alloc] init];
-    riderHL100 = [[NSMutableArray alloc] init];
-    riderHLP = [[NSMutableArray alloc] init];
-    
-    const char *dbpath = [databasePath UTF8String];
-    sqlite3_stmt *statement;
-    if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
-    {
-        NSString *querySQL = [NSString stringWithFormat:
-                @"SELECT RiderCode,SumAssured, HL1KSA, HL100SA, HLPercentage from Trad_Rider_Details WHERE SINo=\"%@\"",SINoPlan];
-        
-        const char *query_stmt = [querySQL UTF8String];
-        if (sqlite3_prepare_v2(contactDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
-        {
-            while (sqlite3_step(statement) == SQLITE_ROW)
-            {
-                [riderCode addObject:[[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 0)]];
-                [riderSA addObject:[[NSString alloc] initWithUTF8String:(const char *)sqlite3_column_text(statement, 1)]];
-                
-                const char *ridHL = (const char *)sqlite3_column_text(statement, 2);
-                [riderHL1K addObject:ridHL == NULL ? nil : [[NSString alloc] initWithUTF8String:ridHL]];
-                
-                const char *ridHL100 = (const char *)sqlite3_column_text(statement, 3);
-                [riderHL100 addObject:ridHL100 == NULL ? nil : [[NSString alloc] initWithUTF8String:ridHL100]];
-                
-                const char *ridHLP = (const char *)sqlite3_column_text(statement, 4);
-                [riderHLP addObject:ridHLP == NULL ? nil : [[NSString alloc] initWithUTF8String:ridHLP]];
-            }
-            sqlite3_finalize(statement);
-        }
-        sqlite3_close(contactDB);
-    }
-}
-
--(void)getRiderRate
-{
-    const char *dbpath = [databasePath UTF8String];
-    sqlite3_stmt *statement;
-    if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
-    {
-        NSString *querySQL = [NSString stringWithFormat: @"SELECT Rate FROM Trad_Sys_Rider_Prem WHERE PlanCode=\"%@\" AND FromTerm=\"%d\" AND FromMortality=0",planCode,termCover];
-        
-        const char *query_stmt = [querySQL UTF8String];
-        if (sqlite3_prepare_v2(contactDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
-        {
-            if (sqlite3_step(statement) == SQLITE_ROW)
-            {
-                riderRate =  sqlite3_column_int(statement, 0);
-            } else {
-                NSLog(@"error access Trad_Sys_Basic_Prem");
-            }
-            sqlite3_finalize(statement);
-        }
-        sqlite3_close(contactDB);
-    }
-}
-
-#pragma mark - Calculation
-
--(void)calculatePremium
-{
-    //    NSLog(@"term:%d, MOP:%d, Income:%@, advanceIncome:%d",termCover,MOP,yearlyIncome,advanceYearlyIncome);
-    
-    [self getBasicPentaRate];
-    [self getLSDRate];
-    NSLog(@"basicrate:%d, lsdrate:%d",basicRate,LSDRate);
-    
-    //calculate basic
-    double BasicSA = [yearlyIncomeField.text doubleValue];
-    double Annually = basicRate * (BasicSA/1000) * 1;
-    double HalfYear = basicRate * (BasicSA/1000) * 0.5125;
-    double Quarterly = basicRate * (BasicSA/1000) * 0.2625;
-    double Monthly = basicRate * (BasicSA/1000) * 0.0875;
-    NSLog(@"Basic A:%.3f, S:%.3f, Q:%.3f, M:%.3f",Annually,HalfYear,Quarterly,Monthly);
-    
-    //calculate health loading
-    double HLoad = [HLField.text doubleValue];
-    double HLAnnually = HLoad * (BasicSA/1000) * 1;
-    double HLHalfYear = HLoad * (BasicSA/1000) * 0.5125;
-    double HLQuarterly = HLoad * (BasicSA/1000) * 0.2625;
-    double HLMonthly = HLoad * (BasicSA/1000) * 0.0875;
-    NSLog(@"Health Loading A:%.3f, S:%.3f, Q:%.3f, M:%.3f",HLAnnually,HLHalfYear,HLQuarterly,HLMonthly);
-    
-    //calculate LSD
-    double LSDAnnually = LSDRate * (BasicSA/1000) * 1;
-    double LSDHalfYear = LSDRate * (BasicSA/1000) * 0.5125;
-    double LSDQuarterly = LSDRate * (BasicSA/1000) * 0.2625;
-    double LSDMonthly = LSDRate * (BasicSA/1000) * 0.0875;
-    NSLog(@"LSD A:%.3f, S:%.3f, Q:%.3f, M:%.3f",LSDAnnually,LSDHalfYear,LSDQuarterly,LSDMonthly);
-    
-    //calculate Total
-    double totalA = Annually + HLAnnually - LSDAnnually;
-    double totalS = HalfYear + HLHalfYear - LSDHalfYear;
-    double totalQ = Quarterly + HLQuarterly - LSDQuarterly;
-    double totalM = Monthly + HLMonthly - LSDMonthly;
-    NSLog(@"total A:%.3f, S:%.3f, Q:%.3f, M:%.3f",totalA,totalS,totalQ,totalM);
-    
-    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
-    [formatter setMaximumFractionDigits:2];
-    [formatter setRoundingMode: NSNumberFormatterRoundUp];
-    //    [formatter setRoundingMode:NSNumberFormatterRoundDown];
-    NSString *numberString = [formatter stringFromNumber:[NSNumber numberWithFloat:22.368511]];
-    NSString *numberString2 = [formatter stringFromNumber:[NSNumber numberWithFloat:22.364511]];
-    NSLog(@"result 1:%@, result 2:%@",numberString,numberString2);
-    [formatter release];
-}
-
--(void)calculateRiderPrem
-{
-    [self getRiderRate];
-    NSLog(@"riderrate:%d, lsdrate:%d",riderRate,LSDRate);
-    
-    NSUInteger i;
-    for (i=0; i<[riderCode count]; i++) {
-        //calculate rider
-        double ridSA = [[riderSA objectAtIndex:i] doubleValue];
-        double Annually = riderRate * (ridSA/1000) * 1;
-        double HalfYear = riderRate * (ridSA/1000) * 0.5125;
-        double Quarterly = riderRate * (ridSA/1000) * 0.2625;
-        double Monthly = riderRate * (ridSA/1000) * 0.0875;
-        NSLog(@"Rider A:%.3f, S:%.3f, Q:%.3f, M:%.3f",Annually,HalfYear,Quarterly,Monthly);
-    
-        //calculate health loading
-        double HLoad;
-        if ([riderHL1K count] != 0) {
-            HLoad = [[riderHL1K objectAtIndex:i] doubleValue];
-        } else if ([riderHL100 count] != 0) {
-            HLoad = [[riderHL100 objectAtIndex:i] doubleValue];
-        } else if ([riderHLP count] != 0) {
-            HLoad = [[riderHLP objectAtIndex:i] doubleValue];
-        }
-        double HLAnnually = HLoad * (ridSA/1000) * 1;
-        double HLHalfYear = HLoad * (ridSA/1000) * 0.5125;
-        double HLQuarterly = HLoad * (ridSA/1000) * 0.2625;
-        double HLMonthly = HLoad * (ridSA/1000) * 0.0875;
-        NSLog(@"Health Loading A:%.3f, S:%.3f, Q:%.3f, M:%.3f",HLAnnually,HLHalfYear,HLQuarterly,HLMonthly);
-    
-        //calculate LSD
-        double LSDAnnually = LSDRate * (ridSA/1000) * 1;
-        double LSDHalfYear = LSDRate * (ridSA/1000) * 0.5125;
-        double LSDQuarterly = LSDRate * (ridSA/1000) * 0.2625;
-        double LSDMonthly = LSDRate * (ridSA/1000) * 0.0875;
-        NSLog(@"LSD A:%.3f, S:%.3f, Q:%.3f, M:%.3f",LSDAnnually,LSDHalfYear,LSDQuarterly,LSDMonthly);
-    
-        //calculate Total
-        double totalA = Annually + HLAnnually - LSDAnnually;
-        double totalS = HalfYear + HLHalfYear - LSDHalfYear;
-        double totalQ = Quarterly + HLQuarterly - LSDQuarterly;
-        double totalM = Monthly + HLMonthly - LSDMonthly;
-        NSLog(@"total A:%.3f, S:%.3f, Q:%.3f, M:%.3f",totalA,totalS,totalQ,totalM);
-    }
-}
-
 #pragma mark - Memory Management
 
 - (void)viewDidUnload
 {
     [self setSINoPlan:nil];
     [self setGetSINo:nil];
-    [self setRiderCode:nil];
-    [self setRiderSA:nil];
     [self setBasicPlanBtn:nil];
     [self setPlanField:nil];
     [self setTermField:nil];
@@ -720,17 +541,17 @@
     [self setTempHLTermField:nil];
     [self setGetHL:nil];
     [self setGetTempHL:nil];
+    [self setPlanCode:nil];
     [super viewDidUnload];
 }
 
 - (void)dealloc
 {
+    [planCode release];
     [getHL release];
     [getTempHL release];
     [SINoPlan release];
     [getSINo release];
-    [riderSA release];
-    [riderCode release];
     [basicPlanBtn release];
     [planField release];
     [termField release];
